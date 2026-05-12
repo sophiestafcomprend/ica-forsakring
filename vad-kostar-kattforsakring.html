@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vad kostar en kattförsäkring? | ICA Försäkring</title>
+<meta name="description" content="Vad kostar en kattförsäkring och hur påverkas priset av kattens ras, ålder och kön? Läs om faktorerna och hur du kan påverka kattförsäkringens pris här.">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 16px; color: #1a1a1a; background: #fff; line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: #e3000b; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { display: block; max-width: 100%; }
+[id] { scroll-margin-top: 70px; }
+.navbar { position: sticky; top: 0; z-index: 200; background: #fff; border-bottom: 1px solid #ebebeb; height: 64px; display: flex; align-items: center; padding: 0 32px; }
+.navbar-inner { max-width: 1120px; margin: 0 auto; width: 100%; display: flex; align-items: center; }
+.nav-logo { display: inline-flex; align-items: baseline; margin-right: 40px; text-decoration: none !important; flex-shrink: 0; font-size: 20px; color: #e3000b; }
+.nav-logo-ica { font-weight: 700; font-style: normal; color: #e3000b; }
+.nav-logo-rest { font-weight: 400; font-style: normal; color: #e3000b; }
+.nav-links { display: flex; list-style: none; gap: 0; }
+.nav-links li a { display: block; padding: 0 16px; height: 64px; line-height: 64px; font-size: 14px; font-weight: 500; color: #1a1a1a; }
+.nav-links li a:hover { color: #e3000b; text-decoration: none; }
+.nav-chevron { font-size: 10px; margin-left: 3px; }
+.nav-right { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+.nav-icon { background: none; border: none; cursor: pointer; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: #1a1a1a; border-radius: 50%; }
+.nav-icon:hover { background: #f5f5f5; }
+.nav-login { display: inline-flex; align-items: center; gap: 7px; background: #e3000b; color: #fff; font-size: 13px; font-weight: 700; padding: 9px 18px; border-radius: 24px; border: none; cursor: pointer; text-decoration: none !important; }
+.nav-login:hover { background: #c20009; color: #fff; }
+.breadcrumb { padding: 12px 32px; font-size: 13px; color: #999; }
+.breadcrumb-inner { max-width: 1120px; margin: 0 auto; display: flex; gap: 6px; align-items: center; }
+.breadcrumb a { color: #999; }
+.breadcrumb a:hover { color: #e3000b; text-decoration: none; }
+.breadcrumb .sep { color: #ccc; font-size: 12px; }
+.support-hero { padding: 56px 32px; }
+.support-hero-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1fr 440px; gap: 56px; align-items: center; }
+.support-hero h1 { font-size: 40px; font-weight: 900; line-height: 1.1; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.5px; }
+.support-hero-lead { font-size: 16px; color: #333; line-height: 1.7; }
+.support-hero-photo { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; background: #e8e0d8; }
+.support-hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.support-body { padding: 48px 32px; }
+.support-body-inner { max-width: 740px; margin: 0 auto; }
+.support-body h2 { font-size: 24px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-top: 40px; margin-bottom: 12px; }
+.support-body h2:first-child { margin-top: 0; }
+.support-body p { font-size: 15px; color: #333; line-height: 1.7; margin-bottom: 14px; }
+.support-body p:last-child { margin-bottom: 0; }
+.support-split { padding: 48px 32px; }
+.support-split-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.support-split-inner.flip { direction: rtl; }
+.support-split-inner.flip > * { direction: ltr; }
+.support-split-photo { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; background: #e8e0d8; }
+.support-split-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.support-split-text h2 { font-size: 24px; font-weight: 900; line-height: 1.2; color: #1a1a1a; margin-bottom: 14px; }
+.support-split-text p { font-size: 15px; color: #333; line-height: 1.7; margin-bottom: 14px; }
+.support-split-text p:last-child { margin-bottom: 0; }
+.scenario-section { padding: 48px 32px; }
+.scenario-inner { max-width: 1120px; margin: 0 auto; }
+.scenario-inner > h2 { font-size: 24px; font-weight: 900; margin-bottom: 8px; color: #1a1a1a; }
+.scenario-inner > p { font-size: 15px; color: #555; margin-bottom: 28px; line-height: 1.6; }
+.scenario-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
+.scenario-card { border-radius: 16px; overflow: hidden; background: #fff; border: 1px solid #e8e8e8; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.scenario-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+.scenario-card-img { position: relative; aspect-ratio: 4/5; overflow: hidden; }
+.scenario-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.scenario-card-img::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0) 45%), linear-gradient(to top, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 40%); }
+.scenario-card-overlay { position: absolute; top: 0; left: 0; right: 0; padding: 22px 22px 0; z-index: 2; }
+.scenario-label { font-size: 11px; font-weight: 700; color: rgba(0,0,0,0.45); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
+.scenario-title { font-size: 20px; font-weight: 900; color: #1a1a1a; line-height: 1.2; letter-spacing: -0.3px; max-width: 200px; }
+.scenario-card-cta { position: absolute; bottom: 0; left: 0; right: 0; padding: 0 22px 20px; z-index: 2; display: flex; align-items: center; gap: 10px; }
+.scenario-trigger-text { font-size: 13px; color: #1a1a1a; font-weight: 600; line-height: 1.3; flex: 1; }
+.scenario-arrow-btn { width: 32px; height: 32px; flex-shrink: 0; background: #e3000b; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background 0.15s ease, transform 0.25s ease; }
+.scenario-card.open .scenario-arrow-btn { background: #c20009; transform: rotate(90deg); }
+.scenario-example { display: none; background: #fff; padding: 20px 22px 22px; border-top: 1px solid #ebebeb; }
+.scenario-card.open .scenario-example { display: block; }
+.scenario-example-row { display: flex; justify-content: space-between; align-items: baseline; padding: 9px 0; border-bottom: 1px solid #ebebeb; font-size: 13px; color: #555; }
+.scenario-example-row span:last-child { font-weight: 600; color: #1a1a1a; }
+.scenario-example-total { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0 0; font-size: 15px; font-weight: 900; color: #1a1a1a; border-top: 2px solid #1a1a1a; margin-top: 2px; }
+.scenario-example-note { font-size: 12px; color: #999; line-height: 1.5; margin-top: 12px; }
+.accordion-section { padding: 48px 32px; }
+.accordion-inner { max-width: 740px; margin: 0 auto; }
+.accordion-inner > h2 { font-size: 24px; font-weight: 900; margin-bottom: 8px; color: #1a1a1a; }
+.accordion-inner > p { font-size: 15px; color: #555; line-height: 1.65; margin-bottom: 20px; }
+.accordion-list { border: 1px solid #e8e8e8; border-radius: 8px; overflow: hidden; }
+.acc-item { border-bottom: 1px solid #e8e8e8; }
+.acc-item:last-child { border-bottom: none; }
+.acc-item summary { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; font-size: 15px; font-weight: 400; color: #1a1a1a; cursor: pointer; list-style: none; gap: 16px; line-height: 1.4; background: #fff; }
+.acc-item summary::-webkit-details-marker { display: none; }
+.acc-chevron { width: 32px; height: 32px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #1a1a1a; transition: transform 0.25s ease; }
+details.acc-item[open] .acc-chevron { transform: rotate(180deg); }
+.acc-body { padding: 0 20px 18px; font-size: 15px; color: #555; line-height: 1.65; }
+.acc-body p { margin-bottom: 10px; }
+.acc-body p:last-child { margin-bottom: 0; }
+.faq-section { padding: 48px 32px; }
+.faq-inner { max-width: 740px; margin: 0 auto; }
+.faq-inner > h2 { font-size: 24px; font-weight: 900; margin-bottom: 24px; color: #1a1a1a; }
+.faq-list { border: 1px solid #e8e8e8; border-radius: 8px; overflow: hidden; }
+details.faq-item { border-bottom: 1px solid #e8e8e8; padding: 0 20px; }
+details.faq-item:last-child { border-bottom: none; }
+details.faq-item summary { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; font-size: 15px; font-weight: 400; color: #1a1a1a; cursor: pointer; list-style: none; gap: 16px; line-height: 1.4; }
+details.faq-item summary::-webkit-details-marker { display: none; }
+.faq-chevron { width: 32px; height: 32px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #1a1a1a; transition: transform 0.25s ease; }
+details.faq-item[open] .faq-chevron { transform: rotate(180deg); }
+.faq-answer { padding: 0 40px 20px 0; font-size: 15px; color: #555; line-height: 1.7; }
+.faq-answer p { margin-bottom: 10px; }
+.faq-answer p:last-child { margin-bottom: 0; }
+.faq-answer ul { padding-left: 20px; margin-top: 8px; display: flex; flex-direction: column; gap: 6px; }
+.support-cta { padding: 48px 32px; }
+.support-cta-inner { max-width: 740px; margin: 0 auto; border-top: 1px solid #e8e8e8; padding-top: 32px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.support-cta-text h2 { font-size: 20px; font-weight: 900; margin-bottom: 6px; color: #1a1a1a; }
+.support-cta-text p { font-size: 15px; color: #555; line-height: 1.6; }
+.btn-red { display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; background: #e3000b; color: #fff; font-size: 15px; font-weight: 700; padding: 12px 24px; border-radius: 28px; border: none; cursor: pointer; text-decoration: none !important; }
+.btn-red:hover { background: #c20009; color: #fff; }
+.read-more-section { padding: 48px 32px; }
+.read-more-inner { max-width: 1120px; margin: 0 auto; }
+.read-more-inner > h2 { font-size: 22px; font-weight: 900; margin-bottom: 20px; color: #1a1a1a; }
+.read-more-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.read-more-card { display: block; color: #1a1a1a; text-decoration: none !important; }
+.read-more-card:hover .read-more-title { color: #e3000b; }
+.read-more-img { border-radius: 8px; overflow: hidden; aspect-ratio: 3/2; background: #e0d8d0; margin-bottom: 12px; }
+.read-more-img img { width: 100%; height: 100%; object-fit: cover; }
+.read-more-title { font-size: 14px; font-weight: 600; color: #1a1a1a; display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; line-height: 1.35; }
+.read-more-arrow { color: #1a1a1a; flex-shrink: 0; font-size: 14px; margin-top: 1px; }
+.site-footer { background: #3a3a3a; color: #aaa; padding: 56px 32px 24px; }
+.footer-inner { max-width: 1120px; margin: 0 auto; }
+.footer-logo { margin-bottom: 40px; }
+.footer-logo-text { display: flex; align-items: center; gap: 6px; }
+.footer-logo-ica { font-size: 26px; font-weight: 900; font-style: italic; color: #fff; letter-spacing: -0.5px; }
+.footer-logo-banken { font-size: 18px; font-weight: 700; color: #fff; font-style: normal; }
+.footer-nav { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; margin-bottom: 48px; }
+.footer-col h4 { font-size: 12px; font-weight: 700; color: #fff; text-transform: capitalize; margin-bottom: 14px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.footer-col ul li a { font-size: 13px; color: #888; }
+.footer-col ul li a:hover { color: #fff; text-decoration: none; }
+.footer-bottom { border-top: 1px solid #4a4a4a; padding-top: 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.footer-address { font-size: 12px; color: #666; line-height: 1.6; }
+.footer-social { display: flex; gap: 10px; }
+.footer-social a { width: 32px; height: 32px; border: 1px solid #555; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #888; }
+.footer-social a:hover { border-color: #888; color: #fff; text-decoration: none; }
+.footer-apps { display: flex; gap: 10px; }
+.app-store-btn { background: #1a1a1a; border: 1px solid #555; border-radius: 7px; padding: 6px 14px; display: flex; align-items: center; gap: 8px; color: #fff; text-decoration: none !important; }
+.app-store-btn:hover { border-color: #888; }
+.app-btn-top { font-size: 9px; color: #aaa; line-height: 1; }
+.app-btn-main { font-size: 13px; font-weight: 600; line-height: 1.2; }
+.footer-links-bar { border-top: 1px solid #4a4a4a; padding-top: 16px; margin-top: 16px; display: flex; gap: 24px; flex-wrap: wrap; font-size: 12px; }
+.footer-links-bar span { color: #555; font-weight: 600; }
+.footer-links-bar a { color: #666; }
+.footer-links-bar a:hover { color: #aaa; text-decoration: none; }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ══ NAVBAR ══════════════════════════════════════════ -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="#" class="nav-logo"><span class="nav-logo-ica">ICA</span><span class="nav-logo-rest">&nbsp;Försäkring</span></a>
+    <ul class="nav-links">
+      <li><a href="#">Försäkringar <span class="nav-chevron">▾</span></a></li>
+      <li><a href="#">Anmäl skada</a></li>
+      <li><a href="#">Tips &amp; råd</a></li>
+      <li><a href="#">Kundservice</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-icon" aria-label="Sök">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <a href="#" class="nav-login">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Logga in
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ BREADCRUMB ════════════════════════════════════════ -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="#">Startsida</a>
+    <span class="sep">›</span>
+    <a href="https://www.icaforsakring.se/djurforsakring/">Djurförsäkring</a>
+    <span class="sep">›</span>
+    <a href="https://www.icaforsakring.se/djurforsakring/kattforsakring/">Kattförsäkring</a>
+    <span class="sep">›</span>
+    <span>Vad kostar en kattförsäkring?</span>
+  </div>
+</div>
+
+<!-- ══ HERO ══════════════════════════════════════════════ -->
+<section class="support-hero">
+  <div class="support-hero-inner">
+    <div>
+      <h1>Vad kostar en kattförsäkring?</h1>
+      <p class="support-hero-lead">Priset på en kattförsäkring påverkas av om katten är en huskatt eller raskatt, hur gammal den är, om den är inne- eller utekatt och var du bor. Det finns också val du gör själv som påverkar kostnaden. Här går vi igenom vad som styr priset och hur du kan tänka.</p>
+    </div>
+    <div class="support-hero-photo">
+      <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_860,q_auto/v1713527480/ofdilhtkragyfmo2bhrm.webp"
+           alt="Man håller orange katt i famnen"
+           onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<!-- ══ BRÖDTEXT ══════════════════════════════════════════ -->
+<section class="support-body">
+  <div class="support-body-inner">
+
+    <h2>Vad påverkar priset?</h2>
+    <p>Det du betalar varje månad för din försäkring kallas <strong>premie</strong>. Premien är fast och betalas oavsett om din katt behöver vård eller inte — precis som ett telefonabonnemang. Försäkringsbolag beräknar premien utifrån sannolikheten att just din katt behöver veterinärvård. Ju högre statistisk risk för sjukdom eller skada, desto högre premie. Det finns fyra faktorer utanför din kontroll:</p>
+
+    <div class="accordion-list" style="margin-top: 20px;">
+      <details class="acc-item">
+        <summary>Ras <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body"><p>Raskatters premie är generellt högre än huskattens eftersom de löper större risk att drabbas av ärftliga sjukdomar. Maine coon och ragdoll har till exempel förhöjd risk för hjärtsjukdomen HCM, och perser är känd för njur- och andningsproblem. Huskattens premie är ofta lägst.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary>Ålder <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body"><p>Risken för sjukdom ökar med åldern. En äldre katt kostar mer att försäkra. Det är ekonomiskt fördelaktigt att teckna tidigt — du undviker också att katten hinner drabbas av sjukdomar som kan undantas vid nyteckning.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary>Inne- eller utekatt <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body"><p>Utekatters premie är vanligtvis högre eftersom de löper större risk att skada sig — de kan råka ut för trafikolyckor, slagsmål med andra djur och smittsamma sjukdomar. Innekatters premie är generellt lägre.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary>Bostadsort <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body"><p>Veterinärtaxorna varierar regionalt. I storstadsregioner är de generellt högre, vilket speglas i premien.</p></div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ SPLIT: Val du gör själv ════════════════════════════ -->
+<section class="support-split">
+  <div class="support-split-inner">
+    <div class="support-split-photo">
+      <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_860,q_auto/v1741260735/Kattnos.webp"
+           alt="Katt närbild"
+           onerror="this.style.display='none'">
+    </div>
+    <div class="support-split-text">
+      <h2>Det här kan du välja själv</h2>
+      <p>Utöver ras och ålder finns det två val du gör när du tecknar försäkringen som direkt påverkar din månadsavgift.</p>
+      <p><strong>Veterinärvårdsbelopp</strong> är det maximala belopp försäkringen ersätter per år. Hos ICA Försäkring väljer du 30 000, 60 000 eller 90 000 kr. Lägre belopp ger lägre premie — men tänk på att en enda komplicerad operation kan kosta 20 000–50 000 kr, och en cancerbehandling kan överstiga det.</p>
+      <p><strong>Självrisk</strong> är den del du betalar själv vid varje skada. Du väljer en fast del (0, 1 500, 2 500 eller 3 500 kr) och en rörlig del (15 % eller 25 % av skadekostnaden). Ju högre självrisk, desto lägre månadsavgift.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SPLIT: Hur fungerar månadskostnaden? ═════════════ -->
+<section class="support-split">
+  <div class="support-split-inner flip">
+    <div class="support-split-photo">
+      <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_860,q_auto/v1713538349/miphd1tfjw2idzs36lar.webp"
+           alt="Person med katt hemma"
+           onerror="this.style.display='none'">
+    </div>
+    <div class="support-split-text">
+      <h2>Så fungerar månadskostnaden</h2>
+      <p>Premien är din fasta månadsavgift och betalas oavsett om du utnyttjar försäkringen. Självrisken betalar du bara de gånger du anmäler en skada — den dras av från ersättningen, inte ovanpå den.</p>
+      <p>Försäkringen gäller per försäkringsår. Ditt veterinärvårdsbelopp nollställs vid varje förnyelse. Om din katt behöver vård för 30 000 kr ett år kan du använda fullt belopp igen nästa år.</p>
+      <p>Priset kan förändras från år till år i takt med att katten åldras eller om kostnadsutvecklingen i branschen förändras.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ACCORDION: Ungefärliga priser per ras ═══════════ -->
+<section class="accordion-section">
+  <div class="accordion-inner">
+    <h2>Ungefärliga priser för vanliga raser</h2>
+    <p>Priset beräknas individuellt. Exemplen nedan är riktpriser med 30 000 kr i veterinärvårdsbelopp och 1 500 kr i fast självrisk för en frisk katt i yngre medelåldern.</p>
+    <div class="accordion-list">
+      <details class="acc-item">
+        <summary>Huskatt <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body"><p>Huskattens premie är generellt lägst. En innehuskatt är ofta billigast att försäkra eftersom risken för skador är lägst. Riktpris: ca 100–200 kr per månad.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary>Maine coon <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body"><p>En av de vanligaste raserna i Sverige. Förhöjd risk för hypertrofisk kardiomyopati (HCM), en hjärtsjukdom som kan kräva livslång medicinering. Riktpris: ca 200–350 kr per månad.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary>Ragdoll <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body"><p>Stor och lugn ras med förhöjd risk för HCM och njursjukdom. Riktpris: ca 200–350 kr per månad.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary>Perser <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body"><p>Kortnosad ras med känd risk för njursjukdom (PKD), andningsproblem och ögonproblem. Tillhör de dyrare kattraserna att försäkra. Riktpris: ca 300–450 kr per månad.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary>Siames och orientaliska raser <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body"><p>Siames och liknande orientaliska raser har förhöjd risk för tandsjukdomar och vissa cancerformer. Riktpris: ca 180–300 kr per månad.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary>Norsk skogkatt och siberian <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body"><p>Robusta raser med relativt god hälsa. Norsk skogkatt har viss risk för HCM och glykogensjukdom (GSD IV). Riktpris: ca 160–280 kr per månad.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SCENARIO CARDS ═════════════════════════════════════ -->
+<section class="scenario-section">
+  <div class="scenario-inner">
+    <h2>Premieexempel för olika typer av katter</h2>
+    <p>Priset sätts individuellt — här är tre exempel på vad premien kan bli beroende på ras, ålder och dina val.</p>
+
+    <div class="scenario-grid">
+
+      <!-- Exempel 1 -->
+      <div class="scenario-card" onclick="toggleScenario(this)">
+        <div class="scenario-card-img">
+          <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1741260735/Kattnos.webp"
+               alt="Huskatt"
+               onerror="this.style.display='none'">
+          <div class="scenario-card-overlay">
+            <div class="scenario-label">Exempel 1</div>
+            <div class="scenario-title">Huskatt, 2 år, innekatt, mellanstor stad</div>
+          </div>
+          <div class="scenario-card-cta">
+            <span class="scenario-trigger-text">Se ungefärlig premie</span>
+            <span class="scenario-arrow-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+        <div class="scenario-example">
+          <div class="scenario-example-row"><span>Veterinärvårdsbelopp</span><span>30 000 kr/år</span></div>
+          <div class="scenario-example-row"><span>Fast självrisk</span><span>1 500 kr</span></div>
+          <div class="scenario-example-row"><span>Rörlig självrisk</span><span>15 %</span></div>
+          <div class="scenario-example-total"><span>Ungefärlig premie</span><span>ca 130 kr/mån</span></div>
+          <p class="scenario-example-note">Innehuskatters premie är generellt lägst. Beräkna ditt exakta pris via priskalkylatorn.</p>
+        </div>
+      </div>
+
+      <!-- Exempel 2 -->
+      <div class="scenario-card" onclick="toggleScenario(this)">
+        <div class="scenario-card-img">
+          <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1713527480/ofdilhtkragyfmo2bhrm.webp"
+               alt="Maine coon"
+               onerror="this.style.display='none'">
+          <div class="scenario-card-overlay">
+            <div class="scenario-label">Exempel 2</div>
+            <div class="scenario-title">Maine coon, 3 år, innekatt, Stockholm</div>
+          </div>
+          <div class="scenario-card-cta">
+            <span class="scenario-trigger-text">Se ungefärlig premie</span>
+            <span class="scenario-arrow-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+        <div class="scenario-example">
+          <div class="scenario-example-row"><span>Veterinärvårdsbelopp</span><span>30 000 kr/år</span></div>
+          <div class="scenario-example-row"><span>Fast självrisk</span><span>1 500 kr</span></div>
+          <div class="scenario-example-row"><span>Rörlig självrisk</span><span>15 %</span></div>
+          <div class="scenario-example-total"><span>Ungefärlig premie</span><span>ca 270 kr/mån</span></div>
+          <p class="scenario-example-note">Maine coon har förhöjd risk för HCM vilket påverkar premien. Beräkna ditt exakta pris via priskalkylatorn.</p>
+        </div>
+      </div>
+
+      <!-- Exempel 3 -->
+      <div class="scenario-card" onclick="toggleScenario(this)">
+        <div class="scenario-card-img">
+          <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1713538349/miphd1tfjw2idzs36lar.webp"
+               alt="Perser"
+               onerror="this.style.display='none'">
+          <div class="scenario-card-overlay">
+            <div class="scenario-label">Exempel 3</div>
+            <div class="scenario-title">Perser, 4 år, utekatt, Göteborg</div>
+          </div>
+          <div class="scenario-card-cta">
+            <span class="scenario-trigger-text">Se ungefärlig premie</span>
+            <span class="scenario-arrow-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+        <div class="scenario-example">
+          <div class="scenario-example-row"><span>Veterinärvårdsbelopp</span><span>60 000 kr/år</span></div>
+          <div class="scenario-example-row"><span>Fast självrisk</span><span>1 500 kr</span></div>
+          <div class="scenario-example-row"><span>Rörlig självrisk</span><span>15 %</span></div>
+          <div class="scenario-example-total"><span>Ungefärlig premie</span><span>ca 400 kr/mån</span></div>
+          <p class="scenario-example-note">Perser tillhör de dyrare raserna, och utekatt ger högre premie än innekatt. Beräkna ditt exakta pris via priskalkylatorn.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+function toggleScenario(card) { card.classList.toggle('open'); }
+</script>
+
+<!-- ══ FAQ ════════════════════════════════════════════════ -->
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <h2>Vanliga frågor om priset</h2>
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>Vad kostar en kattförsäkring per månad? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Priset varierar beroende på ras, ålder, om katten är inne- eller utekatt och bostadsort. En innehuskatt kostar ungefär 100–200 kr per månad med 30 000 kr i veterinärvårdsbelopp. Raskatters premie är generellt högre — en perser kan kosta 300–450 kr per månad.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Kostar det mer att försäkra en utekatt? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Ja. Utekatters premie är vanligtvis högre eftersom risken för skador är statistiskt större — trafikolyckor, slagsmål och smittsamma sjukdomar är vanligare hos katter som vistas utomhus.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Kan jag sänka kostnaden? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer">
+          <p>Ja, på två sätt:</p>
+          <ul>
+            <li>Välj ett lägre veterinärvårdsbelopp (30 000 kr kostar mindre än 90 000 kr per år).</li>
+            <li>Välj högre självrisk — du betalar mer vid en skada men mindre varje månad.</li>
+          </ul>
+          <p>Tänk på att ett för lågt belopp kan lämna dig med stora egna kostnader om katten behöver en dyrare behandling.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Vad är skillnaden mellan fast och rörlig självrisk? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Den fasta självrisken är ett bestämt kronbelopp (0, 1 500, 2 500 eller 3 500 kr) per skadetillfälle. Den rörliga är en procentandel (15 % eller 25 %) av skadekostnaden som tillkommer ovanpå den fasta. Båda dras av från ersättningen — ju högre total självrisk, desto lägre månadsavgift.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Kostar det mer att försäkra en gammal katt? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Ja. Premien ökar gradvis med åldern. Det är ekonomiskt fördelaktigt att teckna tidigt — du undviker också att katten hinner drabbas av sjukdomar som kan undantas vid nyteckning.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Varför kostar samma ras olika hos olika bolag? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Bolagen gör egna riskbedömningar och har olika villkor, ersättningsnivåer och undantag. Jämför alltid både pris och täckning. Konsumenternas.se har ett oberoende jämförelseverktyg för kattförsäkringar.</p></div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ DISKRET CTA ════════════════════════════════════════ -->
+<section class="support-cta">
+  <div class="support-cta-inner">
+    <div class="support-cta-text">
+      <h2>Redo att beräkna ditt pris?</h2>
+      <p>Det tar under en minut att få ett exakt pris för just din katt.</p>
+    </div>
+    <a href="https://www.icaforsakring.se/djurforsakring/kattforsakring/" class="btn-red">
+      Gå till kattförsäkringen
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ══ LÄS MER ════════════════════════════════════════════ -->
+<section class="read-more-section">
+  <div class="read-more-inner">
+    <h2>Läs mer om kattförsäkring</h2>
+    <div class="read-more-grid">
+      <a href="https://www.icaforsakring.se/djurforsakring/kattforsakring/" class="read-more-card">
+        <div class="read-more-img">
+          <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1713527480/ofdilhtkragyfmo2bhrm.webp" alt="Kattförsäkring" onerror="this.parentElement.style.background='#d8d0c8'">
+        </div>
+        <div class="read-more-title">Kattförsäkring – försäkra din katt <span class="read-more-arrow">→</span></div>
+      </a>
+      <a href="https://www.icaforsakring.se/tips-rad/djur/fastingar-pa-hund-och-katt/" class="read-more-card">
+        <div class="read-more-img">
+          <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1741260735/Kattnos.webp" alt="Fästingar på katt" onerror="this.parentElement.style.background='#d8d0c8'">
+        </div>
+        <div class="read-more-title">Fästingar på hund och katt <span class="read-more-arrow">→</span></div>
+      </a>
+      <a href="https://www.icaforsakring.se/djurforsakring/hundforsakring/vad-kostar-hundforsakring/" class="read-more-card">
+        <div class="read-more-img">
+          <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1713538349/miphd1tfjw2idzs36lar.webp" alt="Vad kostar hundförsäkring" onerror="this.parentElement.style.background='#d8d0c8'">
+        </div>
+        <div class="read-more-title">Vad kostar en hundförsäkring? <span class="read-more-arrow">→</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <div class="footer-logo-text"><span class="footer-logo-ica">ICA</span><span class="footer-logo-banken">&nbsp;Banken</span></div>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-col"><h4>Våra tjänster</h4><ul><li><a href="#">Låna pengar</a></li><li><a href="#">Kort &amp; betala</a></li><li><a href="#">Spara pengar</a></li><li><a href="#">Försäkringar</a></li><li><a href="#">Erbjudanden</a></li></ul></div>
+      <div class="footer-col"><h4>Kundservice</h4><ul><li><a href="#">Frågor och svar</a></li><li><a href="#">Kontakta oss</a></li><li><a href="#">Tyck till om oss</a></li></ul></div>
+      <div class="footer-col"><h4>Om ICA Banken</h4><ul><li><a href="#">Fakta om oss</a></li><li><a href="#">Presskontakt</a></li><li><a href="#">Hållbarhetsarbete</a></li><li><a href="#">Jobba hos oss</a></li><li><a href="#">Digital tillgänglighet</a></li></ul></div>
+      <div class="footer-col"><h4>Juridik och säkerhet</h4><ul><li><a href="#">Integritetspolicy</a></li><li><a href="#">Cookies</a></li><li><a href="#">Tillgänglighet</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="#">Terms</a></li><li><a href="#">Privacy</a></li><li><a href="#">Cookies</a></li><li><a href="#">Licenses</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-address">ICA Banken AB, Box 4075, 169 04 Solna<br>Org: 516401-0190</div>
+      <div class="footer-social">
+        <a href="#" aria-label="YouTube"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23 7s-.3-1.9-1.1-2.7c-1.1-1.1-2.3-1.1-2.8-1.2C16.2 3 12 3 12 3s-4.2 0-7.1.1c-.6.1-1.8.1-2.8 1.2C1.3 5.1 1 7 1 7S.7 9.1.7 11.2v2c0 2 .3 4.1.3 4.1s.3 1.9 1.1 2.7c1.1 1.1 2.5 1.1 3.1 1.2C7.2 21.3 12 21.3 12 21.3s4.2 0 7.1-.2c.6-.1 1.7-.2 2.8-1.2.8-.8 1.1-2.7 1.1-2.7s.3-2.1.3-4.1v-2C23.3 9.1 23 7 23 7zM9.7 15.5V8.4l7.6 3.6-7.6 3.5z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      </div>
+      <div class="footer-apps">
+        <a href="#" class="app-store-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83"/></svg><div><div class="app-btn-top">Hämta i</div><div class="app-btn-main">App Store</div></div></a>
+        <a href="#" class="app-store-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m3 3 8.5 8.5L3 20h2l7-7 7 7h2L13 11.5 21 3h-2l-6 6-6-6z"/></svg><div><div class="app-btn-top">LADDA NED PÅ</div><div class="app-btn-main">Google Play</div></div></a>
+      </div>
+    </div>
+    <div class="footer-links-bar">
+      <span>Länkar</span>
+      <a href="#">Penningtvätt</a>
+      <a href="#">Insättningsgaranti</a>
+      <a href="#">Behandling av personuppgifter</a>
+      <a href="#">Cookies</a>
+      <a href="#">Tillgänglighetsredogörelse</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

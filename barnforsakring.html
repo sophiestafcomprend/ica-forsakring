@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barnförsäkring – skydda det käraste du har | ICA Försäkring</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; font-size: 16px; color: #1a1a1a; background: #ffffff; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+a { color: #e3000b; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { display: block; max-width: 100%; }
+[id] { scroll-margin-top: 70px; }
+.navbar { position: sticky; top: 0; z-index: 200; background: #fff; border-bottom: 1px solid #ebebeb; height: 64px; display: flex; align-items: center; padding: 0 32px; }
+.navbar-inner { max-width: 1120px; margin: 0 auto; width: 100%; display: flex; align-items: center; }
+.nav-logo { display: inline-flex; align-items: baseline; margin-right: 40px; text-decoration: none !important; flex-shrink: 0; font-size: 20px; color: #e3000b; }
+.nav-logo-ica { font-size: 20px; font-weight: 700; font-style: normal; color: #e3000b; }
+.nav-logo-rest { font-size: 20px; font-weight: 400; font-style: normal; color: #e3000b; }
+.nav-links { display: flex; list-style: none; }
+.nav-links li a { display: block; padding: 0 16px; height: 64px; line-height: 64px; font-size: 14px; font-weight: 500; color: #1a1a1a; }
+.nav-links li a:hover { color: #e3000b; text-decoration: none; }
+.nav-chevron { font-size: 10px; margin-left: 3px; }
+.nav-right { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+.nav-icon { background: none; border: none; cursor: pointer; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: #1a1a1a; border-radius: 50%; }
+.nav-icon:hover { background: #f5f5f5; }
+.nav-login { display: inline-flex; align-items: center; gap: 7px; background: #e3000b; color: #fff; font-size: 13px; font-weight: 700; padding: 9px 18px; border-radius: 24px; border: none; cursor: pointer; text-decoration: none !important; }
+.nav-login:hover { background: #c20009; color: #fff; }
+.breadcrumb { padding: 12px 32px; font-size: 13px; color: #999; }
+.breadcrumb-inner { max-width: 1120px; margin: 0 auto; display: flex; gap: 6px; align-items: center; }
+.breadcrumb a { color: #999; }
+.breadcrumb a:hover { color: #e3000b; text-decoration: none; }
+.breadcrumb .sep { color: #ccc; font-size: 12px; }
+.hero { padding: 48px 32px; }
+.hero-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1fr 430px; gap: 48px; align-items: start; }
+.hero h1 { font-size: 40px; font-weight: 900; line-height: 1.1; color: #1a1a1a; margin-bottom: 24px; letter-spacing: -0.5px; }
+.hero-items { display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
+.hero-item { display: flex; align-items: center; gap: 12px; font-size: 16px; color: #1a1a1a; }
+.hero-item-icon { width: 26px; height: 26px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.hero-btns { display: flex; gap: 12px; align-items: center; }
+.btn-red { display: inline-flex; align-items: center; gap: 8px; background: #e3000b; color: #fff; font-size: 15px; font-weight: 700; padding: 12px 24px; border-radius: 28px; border: none; cursor: pointer; text-decoration: none !important; }
+.btn-red:hover { background: #c20009; color: #fff; }
+.btn-red svg { flex-shrink: 0; }
+.btn-ghost { display: inline-flex; align-items: center; background: #fff; color: #1a1a1a; font-size: 15px; font-weight: 500; padding: 11px 24px; border-radius: 28px; border: 1.5px solid #d0d0d0; cursor: pointer; text-decoration: none !important; }
+.btn-ghost:hover { border-color: #aaa; color: #1a1a1a; }
+.hero-photo { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; background: #e8e0d8; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+.info-section { padding: 48px 32px; }
+.info-card { max-width: 1120px; margin: 0 auto; background: #fff4f2; border-radius: 16px; padding: 56px 56px; display: grid; grid-template-columns: 1fr 200px; gap: 40px; align-items: start; }
+.info-card h2 { font-size: 26px; font-weight: 900; line-height: 1.2; margin-bottom: 32px; color: #1a1a1a; }
+.info-checklist { list-style: none; margin: 0 0 24px; display: flex; flex-direction: column; gap: 14px; }
+.info-checklist li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; line-height: 1.4; }
+.info-checklist li .ico { flex-shrink: 0; margin-top: 1px; }
+.info-checklist li strong { font-weight: 700; display: block; }
+.info-checklist li span { color: #555; font-size: 14px; }
+.red-text-link { color: #e3000b; font-size: 15px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
+.info-dog { display: flex; align-items: flex-end; justify-content: center; }
+.info-dog img { max-height: 200px; width: auto; }
+.rating-band { padding: 48px 32px; }
+.rating-band-inner { max-width: 1120px; margin: 0 auto; background: #176474; border-radius: 16px; padding: 28px 40px; display: flex; align-items: center; gap: 20px; }
+.rating-band-icon { font-size: 44px; flex-shrink: 0; line-height: 1; }
+.rating-band-text { color: #fff; }
+.rating-band-text .score { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+.rating-band-text p { font-size: 14px; line-height: 1.6; opacity: 0.9; }
+.rating-band-text a { color: rgba(255,255,255,0.8); text-decoration: underline; }
+.teal-band { padding: 48px 32px; }
+.teal-band-inner { max-width: 1120px; margin: 0 auto; background: #176474; border-radius: 16px; padding: 28px 40px; display: flex; align-items: flex-start; gap: 20px; }
+.teal-band-icon { font-size: 40px; flex-shrink: 0; line-height: 1; }
+.teal-band-text { color: #fff; }
+.teal-band-text strong { display: block; font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+.teal-band-text p { font-size: 14px; line-height: 1.6; opacity: 0.9; }
+.teal-band-text a { color: rgba(255,255,255,0.85); text-decoration: underline; }
+.split { padding: 48px 32px; }
+.split-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.split-photo { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; background: #e8e0d8; }
+.split-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.split-text h2 { font-size: 26px; font-weight: 900; line-height: 1.2; margin-bottom: 16px; }
+.split-text p { font-size: 15px; color: #333; line-height: 1.65; margin-bottom: 14px; }
+.accordion-section { padding: 48px 32px; }
+.accordion-inner { max-width: 1120px; margin: 0 auto; }
+.accordion-inner > h2 { font-size: 30px; font-weight: 900; margin-bottom: 32px; color: #1a1a1a; }
+.acc-group-header { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 14px; font-weight: 600; color: #1a1a1a; background: none; }
+.acc-group-header svg { background: #fff4f2; border-radius: 6px; padding: 6px; width: 30px; height: 30px; flex-shrink: 0; }
+.accordion-list { border: 1px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 8px; }
+.acc-item { border-bottom: 1px solid #e8e8e8; }
+.acc-item:last-child { border-bottom: none; }
+.acc-item summary { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; font-size: 15px; font-weight: 400; color: #1a1a1a; cursor: pointer; list-style: none; gap: 16px; line-height: 1.4; background: #fff; }
+.acc-item summary::-webkit-details-marker { display: none; }
+.acc-chevron { width: 32px; height: 32px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #1a1a1a; transition: transform 0.25s ease; }
+details.acc-item[open] .acc-chevron { transform: rotate(180deg); }
+.acc-body { padding: 0 20px 18px 20px; font-size: 15px; color: #555; line-height: 1.65; max-width: 700px; }
+.cards-section { padding: 48px 32px; }
+.cards-inner { max-width: 1120px; margin: 0 auto; }
+.cards-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.card { background: #fff7f5; border-radius: 12px; overflow: hidden; }
+.card-img { width: 100%; aspect-ratio: 3/2; overflow: hidden; background: #e0d8d0; }
+.card-img img { width: 100%; height: 100%; object-fit: cover; }
+.card-body { padding: 20px 20px 24px; }
+.card-body h3 { font-size: 17px; font-weight: 700; margin-bottom: 10px; line-height: 1.3; }
+.card-body p { font-size: 14px; color: #555; line-height: 1.55; margin-bottom: 16px; }
+.card-arrow { width: 36px; height: 36px; background: #e3000b; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; cursor: pointer; text-decoration: none !important; }
+.card-arrow:hover { background: #c20009; }
+.faq-section { padding: 48px 32px; }
+.faq-inner { max-width: 1120px; margin: 0 auto; }
+.faq-inner > h2 { font-size: 30px; font-weight: 900; margin-bottom: 32px; color: #1a1a1a; }
+.faq-list { border: 1px solid #e8e8e8; border-radius: 8px; overflow: hidden; }
+details.faq-item { border-bottom: 1px solid #e8e8e8; padding: 0 20px; }
+details.faq-item:last-child { border-bottom: none; }
+details.faq-item summary { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; font-size: 15px; font-weight: 400; color: #1a1a1a; cursor: pointer; list-style: none; gap: 16px; line-height: 1.4; }
+details.faq-item summary::-webkit-details-marker { display: none; }
+.faq-chevron { width: 32px; height: 32px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #1a1a1a; transition: transform 0.25s ease; }
+details.faq-item[open] .faq-chevron { transform: rotate(180deg); }
+.faq-answer { padding: 0 40px 20px 0; font-size: 15px; color: #555; line-height: 1.7; max-width: 800px; }
+.faq-answer a { color: #e3000b; }
+.related-section { padding: 48px 32px; }
+.related-inner { max-width: 1120px; margin: 0 auto; }
+.related-inner > h2 { font-size: 26px; font-weight: 900; margin-bottom: 24px; color: #1a1a1a; }
+.related-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.related-card { display: block; color: #1a1a1a; text-decoration: none !important; }
+.related-card:hover .related-title { color: #e3000b; }
+.related-img { border-radius: 8px; overflow: hidden; aspect-ratio: 3/2; background: #e0d8d0; margin-bottom: 14px; }
+.related-img img { width: 100%; height: 100%; object-fit: cover; }
+.related-title { font-size: 15px; font-weight: 600; line-height: 1.35; color: #1a1a1a; display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.related-arrow { color: #1a1a1a; flex-shrink: 0; font-size: 14px; margin-top: 1px; }
+.villkor-section { padding: 48px 32px; }
+.villkor-inner { max-width: 1120px; margin: 0 auto; }
+.villkor-inner > h2 { font-size: 30px; font-weight: 900; margin-bottom: 24px; color: #1a1a1a; }
+.villkor-card { background: #f9f5f4; border-radius: 16px; padding: 48px 56px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; }
+.villkor-content { display: flex; flex-direction: column; gap: 36px; }
+.villkor-group h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: #1a1a1a; }
+.villkor-group p { font-size: 14px; color: #555; line-height: 1.6; margin-bottom: 10px; }
+.villkor-link { color: #e3000b; font-size: 14px; font-weight: 500; }
+.villkor-link:hover { text-decoration: underline; }
+.villkor-apple { font-size: 80px; display: flex; align-items: flex-end; padding-bottom: 8px; }
+.site-footer { background: #3a3a3a; color: #aaa; padding: 56px 32px 24px; }
+.footer-inner { max-width: 1120px; margin: 0 auto; }
+.footer-logo { margin-bottom: 40px; }
+.footer-logo-text { display: flex; align-items: center; gap: 6px; }
+.footer-logo-ica { font-size: 26px; font-weight: 900; font-style: italic; color: #fff; letter-spacing: -0.5px; }
+.footer-logo-banken { font-size: 18px; font-weight: 700; color: #fff; }
+.footer-nav { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; margin-bottom: 48px; }
+.footer-col h4 { font-size: 12px; font-weight: 700; color: #fff; margin-bottom: 14px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.footer-col ul li a { font-size: 13px; color: #888; }
+.footer-col ul li a:hover { color: #fff; text-decoration: none; }
+.footer-bottom { border-top: 1px solid #4a4a4a; padding-top: 24px; }
+.footer-address { font-size: 12px; color: #666; line-height: 1.6; }
+.footer-links-bar { border-top: 1px solid #4a4a4a; padding-top: 16px; margin-top: 16px; display: flex; gap: 24px; flex-wrap: wrap; font-size: 12px; }
+.footer-links-bar span { color: #555; font-weight: 600; }
+.footer-links-bar a { color: #666; }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="https://www.icaforsakring.se/" class="nav-logo">
+      <span class="nav-logo-ica">ICA</span><span class="nav-logo-rest">&nbsp;Försäkring</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Försäkringar <span class="nav-chevron">▾</span></a></li>
+      <li><a href="https://www.icaforsakring.se/skadeanmalan/">Anmäl skada</a></li>
+      <li><a href="https://www.icaforsakring.se/tips-rad/">Tips &amp; råd</a></li>
+      <li><a href="https://www.icaforsakring.se/kundservice/">Kundservice</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-icon" aria-label="Sök"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
+      <a href="https://www.icaforsakring.se/mina-sidor/logga-in/" class="nav-login"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Logga in</a>
+    </div>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="https://www.icaforsakring.se/">Startsida</a>
+    <span class="sep">›</span>
+    <a href="https://www.icaforsakring.se/person/">Personförsäkring</a>
+    <span class="sep">›</span>
+    <span>Barnförsäkring</span>
+  </div>
+</div>
+
+<!-- ══ HERO ══════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>Barnförsäkring</h1>
+      <div class="hero-items">
+        <div class="hero-item">
+          <div class="hero-item-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="12" stroke="#1a1a1a" stroke-width="1.5"/><polyline points="8,13 11.5,16.5 18,10" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          Sveriges bästa barnförsäkring enligt konsumenternas.se
+        </div>
+        <div class="hero-item">
+          <div class="hero-item-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="12" stroke="#1a1a1a" stroke-width="1.5"/><polyline points="8,13 11.5,16.5 18,10" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          500 kr i spargåva vid köp för barn under 3 år
+        </div>
+        <div class="hero-item">
+          <div class="hero-item-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="12" stroke="#1a1a1a" stroke-width="1.5"/><polyline points="8,13 11.5,16.5 18,10" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          Hälsodeklaration enkelt online
+        </div>
+      </div>
+      <div class="hero-btns">
+        <a href="#" class="btn-red">Se ditt pris <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="https://www.icaforsakring.se/skadeanmalan/" class="btn-ghost">Anmäl skada</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_1440,q_auto/v1713536356/ytkq3hcgq7uy8hbqhhs3.webp" alt="Mamma sitter med sin bebis i famnen som sover" onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<!-- ══ INFO SAND CARD ════════════════════════════════════ -->
+<section class="info-section">
+  <div class="info-card">
+    <div>
+      <h2>Det här ingår i barnförsäkringen</h2>
+      <ul class="info-checklist">
+        <li>
+          <span class="ico"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="#1a1a1a" stroke-width="1.5"/><polyline points="6.5,11 9.5,14 15.5,8.5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><strong>Medicinsk och ekonomisk invaliditet</strong><span>Högst ersättning på marknaden vid bestående nedsättning eller förlorad arbetsförmåga.</span></div>
+        </li>
+        <li>
+          <span class="ico"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="#1a1a1a" stroke-width="1.5"/><polyline points="6.5,11 9.5,14 15.5,8.5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><strong>Diagnosersättning</strong><span>Engångsersättning på 10% av försäkringsbeloppet vid allvarlig sjukdom som MS, barnreumatism eller malign tumör.</span></div>
+        </li>
+        <li>
+          <span class="ico"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="#1a1a1a" stroke-width="1.5"/><polyline points="6.5,11 9.5,14 15.5,8.5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><strong>Kristerapi för hela familjen</strong><span>Ersättning för upp till 15 tillfällen hos psykolog — även för vårdnadshavare och syskon.</span></div>
+        </li>
+        <li>
+          <span class="ico"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="#1a1a1a" stroke-width="1.5"/><polyline points="6.5,11 9.5,14 15.5,8.5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><strong>Gäller tills barnet fyller 25 år</strong><span>Kan tecknas fram till 18-årsdagen. Försäkringen gäller sedan till 25 år.</span></div>
+        </li>
+      </ul>
+      <a href="https://www.icaforsakring.se/person/barnforsakring/villkor-och-kopinformation/" class="red-text-link">Läs fullständiga villkor →</a>
+    </div>
+    <div class="info-dog">
+      <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1732526372/f1691958.webp" alt="Bebis och syskon" onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<!-- ══ RATING BAND ═══════════════════════════════════════ -->
+<div class="rating-band">
+  <div class="rating-band-inner">
+    <div class="rating-band-icon">🏆</div>
+    <div class="rating-band-text">
+      <div class="score">4,1 av 5 — Sveriges bästa barnförsäkring</div>
+      <p>Enligt Konsumenternas Försäkringsbyråns oberoende jämförelse har vi Sveriges bästa barnförsäkring. Vi ger mer än dubbelt så mycket i ersättning vid medicinsk och ekonomisk invaliditet jämfört med många andra stora, etablerade bolag. Jämför på <a href="https://www.konsumenternas.se/konsumentstod/jamforelser/personforsakringar/jamfor-barnforsakringar/">konsumenternas.se</a>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SPLIT: Varför barnförsäkring — bild höger ═════════ -->
+<section class="split">
+  <div class="split-inner">
+    <div class="split-text">
+      <h2>Varför ska man ha barnförsäkring?</h2>
+      <p>Vi har fantastisk sjukvård i Sverige som hjälper oss vid sjukdomar och olycksfall. Men om ditt barn skulle råka ut för något som gör att hen får en bestående nedsättning och till exempel inte kan komma ut i arbete, kan en barnförsäkring ge ekonomiskt skydd i form av invaliditetsersättning.</p>
+      <p>Till skillnad från skolförsäkringen, som oftast bara gäller olyckor under skoltid, gäller en barnförsäkring både sjukdomar och olycksfall dygnet runt. Ni kan också få hjälp med rehabilitering och hjälpmedel. Dessutom ingår kristerapi, både för barnet och övriga familjen.</p>
+      <a href="#" class="btn-red" style="display:inline-flex; margin-top:8px;">Se ditt pris <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="split-photo">
+      <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_1440,q_auto/v1713536356/ytkq3hcgq7uy8hbqhhs3.webp" alt="Mamma med bebis" onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<!-- ══ SPLIT: Diagnosersättning — bild vänster ════════════ -->
+<section class="split">
+  <div class="split-inner">
+    <div class="split-photo">
+      <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_1440,q_auto/v1713533344/uwdth6luu1gsedhypqw5.webp"
+           alt="Diagnosersättning ingår i barnförsäkringen"
+           onerror="this.style.display='none'">
+    </div>
+    <div class="split-text">
+      <h2>Diagnosersättning ingår</h2>
+      <p>I vår barnförsäkring ingår en diagnosersättning. Det betyder att ni kan få en engångsersättning som motsvarar 10 procent av försäkringsbeloppet om barnet drabbas av en allvarlig sjukdom.</p>
+      <p>Exempel på sjukdomar och tillstånd som diagnosersättningen täcker är MS, barnreumatism och allvarlig brännskada. Se hela listan och förutsättningarna i de <a href="https://assets.icanet.se/image/upload/v1700667305/forsakring/Villkor%20och%20blanketter/Personf%C3%B6rs%C3%A4kring/Barnf%C3%B6rs%C3%A4kring/barnforsakring-fullstandiga-villkor-icaforsakring.pdf">fullständiga villkoren</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SÅ TECKNAR DU ══════════════════════════════════════ -->
+<section style="padding:48px 32px;">
+  <div style="max-width:1120px; margin:0 auto;">
+    <h2 style="font-size:30px; font-weight:900; margin-bottom:4px;">Så tecknar du barnförsäkring</h2>
+    <p style="font-size:15px; color:#555; line-height:1.6; margin-bottom:32px;">Vi rekommenderar att teckna barnförsäkring så snart barnet är utskrivet från BB.</p>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px;">
+      <div style="border:1px solid #e8e8e8; border-radius:10px; padding:28px 24px;">
+        <div style="width:28px;height:28px;border-radius:50%;border:2px solid #e3000b;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#e3000b;margin-bottom:16px;">1</div>
+        <h3 style="font-size:15px;font-weight:700;margin-bottom:8px;">Ange personnummer</h3>
+        <p style="font-size:14px;color:#555;line-height:1.6;">Fyll i barnets och vårdnadshavarens personnummer för att se ditt personliga pris.</p>
+      </div>
+      <div style="border:1px solid #e8e8e8; border-radius:10px; padding:28px 24px;">
+        <div style="width:28px;height:28px;border-radius:50%;border:2px solid #e3000b;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#e3000b;margin-bottom:16px;">2</div>
+        <h3 style="font-size:15px;font-weight:700;margin-bottom:8px;">Välj försäkringsbelopp</h3>
+        <p style="font-size:14px;color:#555;line-height:1.6;">Välj bland fyra försäkringsbelopp. Beloppet styr hur stor ersättningen kan bli om det händer något.</p>
+      </div>
+      <div style="border:1px solid #e8e8e8; border-radius:10px; padding:28px 24px;">
+        <div style="width:28px;height:28px;border-radius:50%;border:2px solid #e3000b;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#e3000b;margin-bottom:16px;">3</div>
+        <h3 style="font-size:15px;font-weight:700;margin-bottom:8px;">Fyll i hälsodeklaration</h3>
+        <p style="font-size:14px;color:#555;line-height:1.6;">Gör hälsodeklarationen enkelt online. Försäkringen börjar gälla direkt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SPLIT: 500 kr spargåva — bild höger ════════════════ -->
+<section class="split">
+  <div class="split-inner">
+    <div class="split-text">
+      <h2>500 kronor i spargåva hos ICA Banken</h2>
+      <p>Köp vår barnförsäkring så får du hela 500 kronor av oss att starta barnspar för hos ICA Banken. Gäller för barn under tre år.</p>
+      <p>Information om barnspar lämnas av ICA Banken och du hittar den på icabanken.se.</p>
+      <a href="https://www.icabanken.se/spara/isk-for-barn-erbjudande/?utm_source=icaforsakring&utm_medium=referral&utm_campaign=global_puff&utm_term=saljpuff&utm_content=spargava" class="btn-ghost" style="display:inline-flex; margin-top:8px;">Spara för barn – ICA Banken</a>
+    </div>
+    <div class="split-photo">
+      <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_1440,q_auto/v1713533344/uwdth6luu1gsedhypqw5.webp" alt="Barn sitter på pappas axlar vid köksbordet och skrattar" onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<!-- ══ SPLIT: Vad kostar barnförsäkring — bild vänster ════ -->
+<section class="split">
+  <div class="split-inner" style="align-items:stretch;">
+    <div class="split-photo" style="aspect-ratio:unset; min-height:320px;">
+      <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_1440,q_auto/v1713533575/ltqkqbidbn3oytdsdgwv.webp"
+           alt="Vad kostar barnförsäkring?"
+           onerror="this.style.display='none'">
+    </div>
+    <div class="split-text">
+      <h2>Vad kostar en barnförsäkring?</h2>
+      <p>Priset på barnförsäkringen beror på vilket försäkringsbelopp du väljer. Det finns fyra alternativ — ju högre belopp, desto högre premie men också större ersättning om något händer.</p>
+      <table style="width:100%; border-collapse:collapse; margin-top:16px; font-size:14px;">
+        <thead>
+          <tr style="background:#fff4f2;">
+            <th style="text-align:left; padding:12px 20px; font-weight:700; color:#1a1a1a; border:1px solid #e8e8e8;">Försäkringsbelopp</th>
+            <th style="text-align:left; padding:12px 20px; font-weight:700; color:#1a1a1a; border:1px solid #e8e8e8;">Pris per månad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:12px 20px; border:1px solid #e8e8e8; color:#555;">Lorem ipsum kr</td>
+            <td style="padding:12px 20px; border:1px solid #e8e8e8; color:#555;">Lorem ipsum kr/mån</td>
+          </tr>
+          <tr style="background:#fafafa;">
+            <td style="padding:12px 20px; border:1px solid #e8e8e8; color:#555;">Lorem ipsum kr</td>
+            <td style="padding:12px 20px; border:1px solid #e8e8e8; color:#555;">Lorem ipsum kr/mån</td>
+          </tr>
+          <tr>
+            <td style="padding:12px 20px; border:1px solid #e8e8e8; color:#555;">Lorem ipsum kr</td>
+            <td style="padding:12px 20px; border:1px solid #e8e8e8; color:#555;">Lorem ipsum kr/mån</td>
+          </tr>
+          <tr style="background:#fafafa;">
+            <td style="padding:12px 20px; border:1px solid #e8e8e8; color:#555;">Lorem ipsum kr</td>
+            <td style="padding:12px 20px; border:1px solid #e8e8e8; color:#555;">Lorem ipsum kr/mån</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:13px; color:#999; margin-top:10px;">Priset gäller för ett barn utan anmärkningar i hälsodeklarationen. Beräkna ditt exakta pris nedan.</p>
+      <a href="#" class="btn-red" style="display:inline-flex; margin-top:16px;">
+        Beräkna ditt pris
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TEAL BAND: Stammisbonus ════════════════════════════ -->
+<div class="teal-band">
+  <div class="teal-band-inner">
+    <div class="teal-band-icon">⭐</div>
+    <div class="teal-band-text">
+      <strong>Samla dina försäkringar – få upp till 500 kr i bonus</strong>
+      <p>Har du tre försäkringar hos oss får du 300 kronor i extra bonus. Fyra eller fler ger hela 500 kronor i extra bonus varje år. <a href="https://www.icaforsakring.se/om-ica-forsakring/bonus-pa-ica-forsakring/">Så funkar stammisbonus</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ACCORDION ══════════════════════════════════════════ -->
+<section class="accordion-section">
+  <div class="accordion-inner">
+    <h2>Det här ingår i barnförsäkringen</h2>
+
+    <div class="acc-group-header">
+      <svg viewBox="0 0 18 18" fill="none" stroke="#1a1a1a" stroke-width="1.5"><path d="M9 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm-6 14c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg>
+      Invaliditet
+    </div>
+    <div class="accordion-list">
+      <details class="acc-item">
+        <summary>Medicinsk invaliditet <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body">En bestående nedsättning av barnets fysiska eller psykiska funktionsförmåga efter olycksfallsskada eller sjukdom. Ersättningen betalas ut med ett engångsbelopp som ökar med graden av invaliditet. Vid 100 procents invaliditet är ersättningen 300 procent av försäkringsbeloppet.</div>
+      </details>
+      <details class="acc-item">
+        <summary>Ekonomisk invaliditet <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body">En bestående nedsättning av barnets framtida arbetsförmåga med minst 50 procent efter sjukdom eller olycksfallsskada som samtidigt medfört medicinsk invaliditet. Vid 100 procent invaliditet är ersättningen 200 procent av försäkringsbeloppet.</div>
+      </details>
+    </div>
+
+    <div class="acc-group-header" style="margin-top:24px;">
+      <svg viewBox="0 0 18 18" fill="none" stroke="#1a1a1a" stroke-width="1.5"><path d="M9 2v14M2 9h14"/></svg>
+      Diagnosersättning och sjukhusvistelse
+    </div>
+    <div class="accordion-list">
+      <details class="acc-item">
+        <summary>Diagnosersättning <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body">Om barnet drabbas av någon av de sjukdomar eller tillstånd som finns listade i villkoren, till exempel malign tumör, MS och barnreumatism, betalas ersättning ut med upp till 10% av försäkringsbeloppet.</div>
+      </details>
+      <details class="acc-item">
+        <summary>Sjukhusvistelse — 600 kr/dag i upp till 365 dagar <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body">Ersättning med ett engångsbelopp vid akut sjukhusvistelse över minst en natt, och 600 kronor per dag i upp till 365 dagar när barnet är inskrivet på sjukhus. Ersättning lämnas inte för behandling i öppenvården.</div>
+      </details>
+      <details class="acc-item">
+        <summary>Vård hemma efter sjukhusvistelse — 600 kr/dag i upp till 30 dagar <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body">Ersättning med 600 kronor per dag i upp till 30 dagar om barnet behöver vårdas hemma efter en sjukhusvistelse. Ersättning betalas inte för dagar då vårdersättning utbetalas från Försäkringskassan.</div>
+      </details>
+    </div>
+
+    <div class="acc-group-header" style="margin-top:24px;">
+      <svg viewBox="0 0 18 18" fill="none" stroke="#1a1a1a" stroke-width="1.5"><circle cx="9" cy="9" r="7"/><path d="M9 6v3l2 2"/></svg>
+      Vård och rehabilitering
+    </div>
+    <div class="accordion-list">
+      <details class="acc-item">
+        <summary>Vård- och månadsersättning — max 9 000 kr/månad <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body">Om ditt barn drabbas av sjukdom eller skada och du som vårdnadshavare beviljas vårdbidrag från Försäkringskassan kan familjen också få månadsersättning från barnförsäkringen, med max 9 000 kronor per månad.</div>
+      </details>
+      <details class="acc-item">
+        <summary>Rehabilitering och hjälpmedel — upp till 220 000 kr <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body">Ersättning för rehabilitering och rehabiliteringshjälpmedel som godkänts av ICA Försäkring — till exempel sjukgymnastik, hjälpmedel eller handikappanpassning av bostaden. Upp till 15 behandlingstillfällen och upp till 220 000 kronor för hjälpmedel eller bostadsanpassning.</div>
+      </details>
+      <details class="acc-item">
+        <summary>Kristerapi — upp till 15 tillfällen <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body">Ersättning för upp till 15 behandlingstillfällen hos psykolog eller terapeut om det händer något svårt i barnets liv — som sjukdom, våld, nära anhörigs död eller mobbning. Även vårdnadshavare och syskon kan få kristerapi.</div>
+      </details>
+    </div>
+
+    <div class="acc-group-header" style="margin-top:24px;">
+      <svg viewBox="0 0 18 18" fill="none" stroke="#1a1a1a" stroke-width="1.5"><circle cx="9" cy="9" r="7"/><path d="M9 13v-4M9 6h.01"/></svg>
+      Övrigt
+    </div>
+    <div class="accordion-list">
+      <details class="acc-item">
+        <summary>Ärrersättning <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body">Om barnet får ärr eller andra förändringar av utseendet efter olycksfall eller sjukdom som krävt läkarbehandling kan ett engångsbelopp betalas ut enligt Trafikskadenämndens tabell.</div>
+      </details>
+      <details class="acc-item">
+        <summary>Omkostnader vid olycksfall <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body">Ersättning för kostnader som uppkommer vid olycksfallsskada — till exempel läkarvård, medicin, hjälpmedel, tandvård samt förstörda kläder, glasögon och hjälm. Kostnader som uppkommit inom fem år från olycksfallet kan ersättas.</div>
+      </details>
+      <details class="acc-item">
+        <summary>Dödsfallsersättning <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body">Om ditt barn avlider betalas ett engångsbelopp ut, oavsett dödsfallsorsak.</div>
+      </details>
+      <details class="acc-item">
+        <summary>Kostnadsfri försäkring vid förälders dödsfall <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body">Avlider någon av barnets vårdnadshavare gäller försäkringen kostnadsfritt tills barnet fyllt 18 år.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SCENARIO CARDS ═════════════════════════════════════ -->
+<style>
+.scenario-section { padding: 48px 32px; }
+.scenario-inner { max-width: 1120px; margin: 0 auto; }
+.scenario-inner > h2 { font-size: 24px; font-weight: 900; margin-bottom: 8px; color: #1a1a1a; }
+.scenario-inner > p { font-size: 15px; color: #555; margin-bottom: 28px; line-height: 1.6; }
+.scenario-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
+.scenario-card { border-radius: 16px; overflow: hidden; background: #fff; border: 1px solid #e8e8e8; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.scenario-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+.scenario-card-img { position: relative; aspect-ratio: 4/5; overflow: hidden; }
+.scenario-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.scenario-card-img::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0) 45%), linear-gradient(to top, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 40%); }
+.scenario-card-overlay { position: absolute; top: 0; left: 0; right: 0; padding: 22px 22px 0; z-index: 2; }
+.scenario-label { font-size: 11px; font-weight: 700; color: rgba(0,0,0,0.45); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
+.scenario-title { font-size: 20px; font-weight: 900; color: #1a1a1a; line-height: 1.2; letter-spacing: -0.3px; max-width: 200px; }
+.scenario-card-cta { position: absolute; bottom: 0; left: 0; right: 0; padding: 0 22px 20px; z-index: 2; display: flex; align-items: center; gap: 10px; }
+.scenario-trigger-text { font-size: 13px; color: #1a1a1a; font-weight: 600; line-height: 1.3; flex: 1; }
+.scenario-arrow-btn { width: 32px; height: 32px; flex-shrink: 0; background: #e3000b; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background 0.15s ease, transform 0.25s ease; }
+.scenario-card.open .scenario-arrow-btn { background: #c20009; transform: rotate(90deg); }
+.scenario-example { display: none; background: #fff; padding: 20px 22px 22px; border-top: 1px solid #ebebeb; }
+.scenario-card.open .scenario-example { display: block; }
+.scenario-example-row { display: flex; justify-content: space-between; align-items: baseline; padding: 9px 0; border-bottom: 1px solid #ebebeb; font-size: 13px; color: #555; }
+.scenario-example-row span:last-child { font-weight: 600; color: #1a1a1a; }
+.scenario-example-total { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0 0; font-size: 15px; font-weight: 900; color: #1a1a1a; border-top: 2px solid #1a1a1a; margin-top: 2px; }
+.scenario-example-note { font-size: 12px; color: #999; line-height: 1.5; margin-top: 12px; }
+</style>
+
+<section class="scenario-section">
+  <div class="scenario-inner">
+    <h2>Vad kan det betyda i praktiken?</h2>
+    <p>Tre verkliga scenarion — se vad barnförsäkringen ersätter om olyckan är framme.</p>
+
+    <div class="scenario-grid">
+
+      <!-- Scenario 1 -->
+      <div class="scenario-card" onclick="toggleScenario(this)">
+        <div class="scenario-card-img">
+          <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1710430449/forsakring/Tips%20och%20r%C3%A5d/flytvast-barn-600x400.webp"
+               alt="Barn som skadar sig utomhus"
+               onerror="this.style.display='none'">
+          <div class="scenario-card-overlay">
+            <div class="scenario-label">Scenario 1</div>
+            <div class="scenario-title">Ditt barn bryter armen på lekplatsen</div>
+          </div>
+          <div class="scenario-card-cta">
+            <span class="scenario-trigger-text">Vad ersätts?</span>
+            <span class="scenario-arrow-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+        <div class="scenario-example">
+          <div class="scenario-example-row"><span>Sjukhusvistelse 1 dygn</span><span>200 kr</span></div>
+          <div class="scenario-example-row"><span>Akut inskrivning (engångsbelopp)</span><span>500 kr</span></div>
+          <div class="scenario-example-row"><span>Rehabilitering, 4 behandlingar</span><span>6 000 kr</span></div>
+          <div class="scenario-example-row"><span>Rese- och behandlingskostnader</span><span>2 200 kr</span></div>
+          <div class="scenario-example-row"><span>Sveda och värk (sjukskriven 15+ dagar)</span><span>3 000 kr</span></div>
+          <div class="scenario-example-total"><span>Försäkringen ersätter totalt</span><span>11 900 kr</span></div>
+          <p class="scenario-example-note">Ingen självrisk. Exakt ersättning beror på faktiska kostnader och behandling.</p>
+        </div>
+      </div>
+
+      <!-- Scenario 2 -->
+      <div class="scenario-card" onclick="toggleScenario(this)">
+        <div class="scenario-card-img">
+          <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1713533575/ltqkqbidbn3oytdsdgwv.webp"
+               alt="Barn hos läkare"
+               onerror="this.style.display='none'">
+          <div class="scenario-card-overlay">
+            <div class="scenario-label">Scenario 2</div>
+            <div class="scenario-title">Ditt barn får diagnosen typ 1-diabetes</div>
+          </div>
+          <div class="scenario-card-cta">
+            <span class="scenario-trigger-text">Vad ersätts?</span>
+            <span class="scenario-arrow-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+        <div class="scenario-example">
+          <div class="scenario-example-row"><span>Diagnosersättning vid allvarlig sjukdom</span><span>75 000 kr</span></div>
+          <div class="scenario-example-row"><span>Utbetalas som engångsbelopp</span><span>75 000 kr</span></div>
+          <div class="scenario-example-row"><span>Används fritt — utrustning, anpassning, sparande</span><span>✓</span></div>
+          <div class="scenario-example-total"><span>Försäkringen ersätter totalt</span><span>75 000 kr</span></div>
+          <p class="scenario-example-note">Diagnosersättning gäller vid allvarliga sjukdomar som ingår i villkoren. Beloppet beror på valt försäkringsbelopp.</p>
+        </div>
+      </div>
+
+      <!-- Scenario 3 -->
+      <div class="scenario-card" onclick="toggleScenario(this)">
+        <div class="scenario-card-img">
+          <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1715689606/AdobeStock_233438586.webp"
+               alt="Barn med bestående men"
+               onerror="this.style.display='none'">
+          <div class="scenario-card-overlay">
+            <div class="scenario-label">Scenario 3</div>
+            <div class="scenario-title">Ditt barn får ett bestående men efter en olycka</div>
+          </div>
+          <div class="scenario-card-cta">
+            <span class="scenario-trigger-text">Vad ersätts?</span>
+            <span class="scenario-arrow-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+        <div class="scenario-example">
+          <div class="scenario-example-row"><span>Medicinsk invaliditet 10 %</span><span>150 000 kr</span></div>
+          <div class="scenario-example-row"><span>Rehabilitering, 10 behandlingar</span><span>15 000 kr</span></div>
+          <div class="scenario-example-row"><span>Kristerapi för barnet, 10 samtal</span><span>15 000 kr</span></div>
+          <div class="scenario-example-row"><span>Rese- och behandlingskostnader</span><span>8 500 kr</span></div>
+          <div class="scenario-example-total"><span>Försäkringen ersätter totalt</span><span>188 500 kr</span></div>
+          <p class="scenario-example-note">Invaliditetsersättning beräknas som valt försäkringsbelopp × invaliditetsgrad %. Beloppet väljer du vid teckning.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+function toggleScenario(card) { card.classList.toggle('open'); }
+</script>
+
+<!-- ══ 2 CARDS ═══════════════════════════════════════════ -->
+<section class="cards-section">
+  <div class="cards-inner">
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-img">
+          <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1713533575/ltqkqbidbn3oytdsdgwv.webp" alt="BlueCall ingår i din försäkring" onerror="this.parentElement.style.background='#d8d0c8'">
+        </div>
+        <div class="card-body">
+          <h3>BlueCall ingår i din försäkring</h3>
+          <p>Du som är försäkrad hos oss har tillgång till tre kostnadsfria stödsamtal per år via BlueCall. Chatta eller prata med en terapeut, helt anonymt.</p>
+          <a href="https://www.icaforsakring.se/om-ica-forsakring/erbjudanden/bluecall/" class="card-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1713538702/xvzpu1lbgm5mkhtunfoo.webp" alt="Planerar ni barn? Kolla gravidförsäkringen" onerror="this.parentElement.style.background='#d8d0c8'">
+        </div>
+        <div class="card-body">
+          <h3>Planerar ni barn? Kolla gravidförsäkringen</h3>
+          <p>Vår gravidförsäkring gäller för både barnet och den gravida, innan födseln och under förlossningen — ett komplement till barnförsäkringen.</p>
+          <a href="https://www.icaforsakring.se/person/gravidforsakring/" class="card-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══════════════════════════════════════════════════ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <h2>Frågor och svar om barnförsäkring</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Varför ska man ha barnförsäkring? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Det finns inget lagkrav men det är starkt rekommenderat. En barnförsäkring kan inte förhindra att något händer ditt barn, men den kan göra en enorm skillnad ekonomiskt om något faktiskt skulle hända — till exempel vid bestående nedsättning, sjukhusvistelse eller om barnet inte kan arbeta i framtiden.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>När ska man teckna barnförsäkring? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Vi rekommenderar att teckna en barnförsäkring så tidigt som möjligt, helst direkt efter hemkomsten från BB. Du kan teckna barnförsäkring fram till barnets 18-årsdag. Försäkringen gäller sedan fram till att barnet fyllt 25 år.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Hur tidigt efter förlossning kan jag köpa barnförsäkring? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Du kan teckna barnförsäkring så snart din bebis blivit godkänd i slutkontrollen hos barnläkaren. Det är vid återbesöket efter förlossningen som slutkontrollen görs och ni formellt skrivs ut. Efter det kan du köpa barnförsäkringen.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Vad kostar barnförsäkringen? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Priset beror på vilket försäkringsbelopp du väljer — det finns fyra alternativ. Beloppet styr hur stor ersättningen kan bli om det händer något. Beräkna ditt pris direkt på sidan.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Vad skiljer sig mellan olika barnförsäkringar? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Vad du får ersättning för skiljer sig i princip inte mellan olika barnförsäkringar. Däremot kan det vara en enorm skillnad på hur stor ersättningen är. ICAs barnförsäkring ger mer än dubbelt så mycket i ersättning vid medicinsk och ekonomisk invaliditet jämfört med många andra stora, etablerade bolag.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Hur länge gäller barnförsäkringen? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>ICAs barnförsäkring gäller fram tills barnet fyller 25 år. Efter det kan du teckna <a href="https://www.icaforsakring.se/person/olycksfallsforsakring/">vidareförsäkring för vuxna</a>.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Hur gäller barnförsäkringen vid autism och ADHD? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Neuropsykiatriska funktionsnedsättningar som ADHD och autism har begränsat skydd i vår barnförsäkring. Dessa diagnoser kan däremot täckas av diagnosersättningen om de leder till att ni får omvårdnadsbidrag via Försäkringskassan.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Går det att teckna barnförsäkring för en prematurbebis? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Alla har rätt att ansöka om barnförsäkring hos oss. Beroende på svaren i hälsodeklarationen avgör våra riskbedömare om försäkringen kan tecknas. Ring oss på 033-47 47 90, vardagar 08:00–17:30.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Byta barnförsäkring — hur funkar det? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Det går att byta barnförsäkring, men se till att få en motsvarande försäkring godkänd i det nya bolaget. Det kan finnas karenstid för sjukdomar i den nya försäkringen. Om ditt barn har en sjukdomshistoria kan det vara klokt att ha dubbla försäkringar under karenstiden.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Går det att ha dubbla barnförsäkringar? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Ja, det är möjligt att ha fler än en barnförsäkring hos olika försäkringsbolag. Du kan inte teckna fler än en barnförsäkring hos oss. Du kan få ersättning från flera försäkringar för en viss skada, men bara för faktiska kostnader från en försäkring i taget.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RELATED ARTICLES ══════════════════════════════════ -->
+<section class="related-section">
+  <div class="related-inner">
+    <h2>Relaterade artiklar</h2>
+    <div class="related-grid">
+      <a href="https://www.icaforsakring.se/tips-rad/familj/forsakra-barn-svar-pa-5-vanliga-fragor/" class="related-card">
+        <div class="related-img">
+          <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1732526372/f1691958.webp" alt="Fem vanliga frågor om att försäkra barn" onerror="this.parentElement.style.background='#d8d0c8'">
+        </div>
+        <div class="related-title">Fem vanliga frågor om att försäkra barn <span class="related-arrow">→</span></div>
+      </a>
+      <a href="https://www.icaforsakring.se/tips-rad/fordon/lamna-inte-djur-eller-sma-barn-i-bilen/" class="related-card">
+        <div class="related-img">
+          <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1715689606/AdobeStock_233438586.webp" alt="Lämna inte djur eller små barn i bilen" onerror="this.parentElement.style.background='#d8d0c8'">
+        </div>
+        <div class="related-title">Lämna inte djur eller små barn i bilen <span class="related-arrow">→</span></div>
+      </a>
+      <a href="https://www.icaforsakring.se/tips-rad/familj/guide-valj-ratt-flytvast-till-barnen/" class="related-card">
+        <div class="related-img">
+          <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1710430449/forsakring/Tips%20och%20r%C3%A5d/flytvast-barn-600x400.webp" alt="Guide – välj rätt flytväst till barnen" onerror="this.parentElement.style.background='#d8d0c8'">
+        </div>
+        <div class="related-title">Guide – välj rätt flytväst till barnen <span class="related-arrow">→</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ VILLKOR & KÖPINFORMATION ════════════════════════════ -->
+<section class="villkor-section">
+  <div class="villkor-inner">
+    <h2>Villkor och köpinformation</h2>
+    <div class="villkor-card">
+      <div class="villkor-content">
+        <div class="villkor-group">
+          <h3>Villkor och förköpsinformation</h3>
+          <p>Här hittar du detaljerad information om vår barnförsäkring och hur vi ersätter.</p>
+          <a href="https://assets.icanet.se/image/upload/v1700667305/forsakring/Villkor%20och%20blanketter/Personf%C3%B6rs%C3%A4kring/Barnf%C3%B6rs%C3%A4kring/barnforsakring-fullstandiga-villkor-icaforsakring.pdf" class="villkor-link">Fullständiga villkor för barnförsäkring (pdf)</a>
+        </div>
+        <div class="villkor-group">
+          <h3>Ingen självrisk</h3>
+          <p>Barnförsäkringen har ingen självrisk. Ersättningen betalas ut i sin helhet när villkoren är uppfyllda.</p>
+        </div>
+        <div class="villkor-group">
+          <h3>Rätten att ansöka om barnförsäkring</h3>
+          <p>Alla har rätt att ansöka om barnförsäkring. Här kan du läsa om hur hälsodeklarationen används, varför ett barn kan få undantag eller avslag, och vad du kan göra om du inte är nöjd med beslutet.</p>
+          <a href="https://assets.icanet.se/image/upload/v1700667307/forsakring/Villkor%20och%20blanketter/Personf%C3%B6rs%C3%A4kring/Barnf%C3%B6rs%C3%A4kring/ratten-att-teckna-barnforsakring.pdf" class="villkor-link">Rätten att ansöka om barnförsäkring (pdf)</a>
+        </div>
+          <p>Vid köp via distansavtal har du rätt att ångra köpet inom 30 dagar från att barnförsäkringen tecknats.</p>
+          <a href="https://www.icaforsakring.se/person/barnforsakring/villkor-och-kopinformation/#kopinfo" class="villkor-link">Köpinformation</a>
+        </div>
+      </div>
+      <div class="villkor-apple">👶</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo"><div class="footer-logo-text"><span class="footer-logo-ica">ICA</span><span class="footer-logo-banken">&nbsp;Banken</span></div></div>
+    <div class="footer-nav">
+      <div class="footer-col"><h4>Våra försäkringar</h4><ul><li><a href="https://www.icaforsakring.se/bilforsakring/">Bilförsäkring</a></li><li><a href="https://www.icaforsakring.se/hemforsakring/">Hemförsäkring</a></li><li><a href="https://www.icaforsakring.se/person/">Personförsäkring</a></li><li><a href="https://www.icaforsakring.se/djurforsakring/">Djurförsäkring</a></li></ul></div>
+      <div class="footer-col"><h4>Lär dig mer</h4><ul><li><a href="https://www.icaforsakring.se/tips-rad/">Våra tips</a></li><li><a href="https://www.icaforsakring.se/ordlista/">Ordlista</a></li><li><a href="https://www.icaforsakring.se/vanliga-fragor/">Frågor och svar</a></li></ul></div>
+      <div class="footer-col"><h4>Kundservice</h4><ul><li><a href="https://www.icaforsakring.se/kundservice/">Kontakta oss</a></li><li><a href="https://www.icaforsakring.se/kundservice/boka-mote/">Boka rådgivning</a></li><li><a href="https://www.icaforsakring.se/skadeanmalan/">Skadeanmälan</a></li></ul></div>
+      <div class="footer-col"><h4>Om ICA Försäkring</h4><ul><li><a href="https://www.icaforsakring.se/om-ica-forsakring/">Om oss</a></li><li><a href="https://www.icaforsakring.se/om-ica-forsakring/presskontakt/">Presskontakt</a></li></ul></div>
+      <div class="footer-col"><h4>Om webbplatsen</h4><ul><li><a href="https://www.icaforsakring.se/kundservice/anvandning-av-cookies/">Cookies</a></li><li><a href="https://www.icaforsakring.se/kundservice/personuppgifter/">Personuppgifter</a></li><li><a href="https://www.icaforsakring.se/kundservice/villkor/">Villkor</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div class="footer-address">ICA Försäkring AB, Box 4075, 169 04 Solna · Org: 556966-2975 · Tel: 033-47 47 90</div></div>
+    <div class="footer-links-bar"><span>Länkar</span><a href="#">Penningtvätt</a><a href="#">Behandling av personuppgifter</a><a href="#">Cookies</a><a href="#">Tillgänglighetsredogörelse</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
