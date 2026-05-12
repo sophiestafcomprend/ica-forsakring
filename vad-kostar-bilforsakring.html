@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vad kostar bilförsäkring? - Så påverkas ditt pris | ICA Försäkring</title>
+<style>
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 16px; color: #1a1a1a; background: #ffffff;
+  line-height: 1.5; -webkit-font-smoothing: antialiased;
+}
+a { color: #e3000b; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { display: block; max-width: 100%; }
+[id] { scroll-margin-top: 70px; }
+
+/* ── NAVBAR ── */
+.navbar {
+  position: sticky; top: 0; z-index: 200;
+  background: #fff; border-bottom: 1px solid #ebebeb;
+  height: 64px; display: flex; align-items: center; padding: 0 32px;
+}
+.navbar-inner { max-width: 1120px; margin: 0 auto; width: 100%; display: flex; align-items: center; }
+.nav-logo { display: inline-flex; align-items: baseline; margin-right: 40px; text-decoration: none !important; flex-shrink: 0; line-height: 1; font-size: 20px; color: #e3000b; }
+.nav-logo-ica { font-size: 20px; font-weight: 700; font-style: normal; color: #e3000b; }
+.nav-logo-rest { font-size: 20px; font-weight: 400; font-style: normal; color: #e3000b; }
+.nav-links { display: flex; list-style: none; gap: 0; }
+.nav-links li a { display: block; padding: 0 16px; height: 64px; line-height: 64px; font-size: 14px; font-weight: 500; color: #1a1a1a; }
+.nav-links li a:hover { color: #e3000b; text-decoration: none; }
+.nav-chevron { font-size: 10px; margin-left: 3px; }
+.nav-right { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+.nav-icon { background: none; border: none; cursor: pointer; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: #1a1a1a; border-radius: 50%; }
+.nav-icon:hover { background: #f5f5f5; }
+.nav-login { display: inline-flex; align-items: center; gap: 7px; background: #e3000b; color: #fff; font-size: 13px; font-weight: 700; padding: 9px 18px; border-radius: 24px; border: none; cursor: pointer; text-decoration: none !important; }
+.nav-login:hover { background: #c20009; color: #fff; }
+
+/* ── BREADCRUMB ── */
+.breadcrumb { padding: 12px 32px; font-size: 13px; color: #999; }
+.breadcrumb-inner { max-width: 1120px; margin: 0 auto; display: flex; gap: 6px; align-items: center; }
+.breadcrumb a { color: #999; }
+.breadcrumb a:hover { color: #e3000b; text-decoration: none; }
+.breadcrumb .sep { color: #ccc; font-size: 12px; }
+
+/* ── HERO (supportsida - ingen CTA-knapp) ── */
+.hero { padding: 48px 32px; }
+.hero-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1fr 430px; gap: 48px; align-items: start; }
+.hero h1 { font-size: 40px; font-weight: 900; line-height: 1.1; color: #1a1a1a; margin-bottom: 20px; letter-spacing: -0.5px; }
+.hero-ingress { font-size: 17px; color: #333; line-height: 1.65; }
+.hero-photo { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; background: #e8e0d8; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ── BUTTONS ── */
+.btn-red { display: inline-flex; align-items: center; gap: 8px; background: #e3000b; color: #fff; font-size: 15px; font-weight: 700; padding: 12px 24px; border-radius: 28px; border: none; cursor: pointer; text-decoration: none !important; }
+.btn-red:hover { background: #c20009; color: #fff; }
+.btn-ghost { display: inline-flex; align-items: center; background: #fff; color: #1a1a1a; font-size: 15px; font-weight: 500; padding: 11px 24px; border-radius: 28px; border: 1.5px solid #d0d0d0; cursor: pointer; text-decoration: none !important; }
+.btn-ghost:hover { border-color: #aaa; }
+
+/* ── INFO SAND CARD ── */
+.info-section { padding: 48px 32px; }
+.info-card { max-width: 1120px; margin: 0 auto; background: #fff4f2; border-radius: 16px; padding: 56px 56px; display: grid; grid-template-columns: 1fr 200px; gap: 40px; align-items: start; }
+.info-card h2 { font-size: 26px; font-weight: 900; line-height: 1.2; margin-bottom: 20px; color: #1a1a1a; }
+.info-card > div:first-child > p { font-size: 15px; color: #333; line-height: 1.65; margin-bottom: 12px; }
+.info-checklist { list-style: none; margin: 16px 0 24px; display: flex; flex-direction: column; gap: 14px; }
+.info-checklist li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; line-height: 1.4; }
+.info-checklist li .ico { flex-shrink: 0; margin-top: 1px; }
+.info-checklist li strong { font-weight: 700; display: block; }
+.info-checklist li span { color: #555; font-size: 14px; }
+.info-car { display: flex; align-items: flex-end; justify-content: center; }
+
+/* ── TEAL BAND ── */
+.teal-band { padding: 48px 32px; }
+.teal-band-inner { max-width: 1120px; margin: 0 auto; background: #176474; border-radius: 16px; padding: 28px 40px; display: flex; align-items: flex-start; gap: 20px; }
+.teal-band-icon { font-size: 40px; flex-shrink: 0; line-height: 1; }
+.teal-band-text { color: #fff; }
+.teal-band-text strong { display: block; font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+.teal-band-text p { font-size: 14px; line-height: 1.6; opacity: 0.9; }
+
+/* ── SPLIT ── */
+.split { padding: 48px 32px; }
+.split-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.split-photo { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; background: #e8e0d8; }
+.split-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.split-text h2 { font-size: 26px; font-weight: 900; line-height: 1.2; margin-bottom: 16px; }
+.split-text p { font-size: 15px; color: #333; line-height: 1.65; margin-bottom: 14px; }
+.split-text .btn-red { margin-top: 8px; }
+
+/* ── ACCORDION ── */
+.accordion-section { padding: 48px 32px; }
+.accordion-inner { max-width: 1120px; margin: 0 auto; }
+.accordion-inner > h2 { font-size: 30px; font-weight: 900; margin-bottom: 8px; color: #1a1a1a; }
+.accordion-inner > p { font-size: 15px; color: #555; line-height: 1.65; margin-bottom: 32px; }
+.acc-group-header { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 14px; font-weight: 600; color: #1a1a1a; background: none; }
+.acc-group-header svg { background: #fff4f2; border-radius: 6px; padding: 6px; width: 30px; height: 30px; flex-shrink: 0; }
+.accordion-list { border: 1px solid #e8e8e8; border-radius: 8px; overflow: hidden; margin-bottom: 8px; }
+.acc-item { border-bottom: 1px solid #e8e8e8; }
+.acc-item:last-child { border-bottom: none; }
+.acc-item summary { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; font-size: 15px; font-weight: 400; color: #1a1a1a; cursor: pointer; list-style: none; gap: 16px; line-height: 1.4; background: #fff; }
+.acc-item summary::-webkit-details-marker { display: none; }
+.acc-chevron { width: 32px; height: 32px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #1a1a1a; transition: transform 0.25s ease; }
+details.acc-item[open] .acc-chevron { transform: rotate(180deg); }
+.acc-body { padding: 0 20px 18px 20px; font-size: 15px; color: #555; line-height: 1.65; max-width: 700px; }
+.acc-body p + p { margin-top: 10px; }
+.acc-body ul { padding-left: 18px; margin-top: 8px; display: flex; flex-direction: column; gap: 5px; }
+
+/* ── FAQ ── */
+.faq-section { padding: 48px 32px; }
+.faq-inner { max-width: 1120px; margin: 0 auto; }
+.faq-inner > h2 { font-size: 30px; font-weight: 900; margin-bottom: 32px; color: #1a1a1a; }
+.faq-list { border: 1px solid #e8e8e8; border-radius: 8px; overflow: hidden; }
+details.faq-item { border-bottom: 1px solid #e8e8e8; padding: 0 20px; }
+details.faq-item:last-child { border-bottom: none; }
+details.faq-item summary { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; font-size: 15px; font-weight: 400; color: #1a1a1a; cursor: pointer; list-style: none; gap: 16px; line-height: 1.4; }
+details.faq-item summary::-webkit-details-marker { display: none; }
+.faq-chevron { width: 32px; height: 32px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #1a1a1a; transition: transform 0.25s ease; }
+details.faq-item[open] .faq-chevron { transform: rotate(180deg); }
+.faq-answer { padding: 0 40px 20px 0; font-size: 15px; color: #555; line-height: 1.7; max-width: 800px; }
+.faq-answer p + p { margin-top: 10px; }
+.faq-answer ul { padding-left: 20px; margin-top: 8px; display: flex; flex-direction: column; gap: 6px; }
+
+/* ── SCENARIO CARDS ── */
+.scenario-section { padding: 48px 32px; }
+.scenario-inner { max-width: 1120px; margin: 0 auto; }
+.scenario-inner > h2 { font-size: 30px; font-weight: 900; margin-bottom: 8px; color: #1a1a1a; }
+.scenario-inner > p { font-size: 15px; color: #555; margin-bottom: 28px; line-height: 1.65; }
+.scenario-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
+.scenario-card { border-radius: 16px; overflow: hidden; background: #fff; border: 1px solid #e8e8e8; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.scenario-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+.scenario-card-img { position: relative; aspect-ratio: 4/5; overflow: hidden; }
+.scenario-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.scenario-card-img::before {
+  content: ''; position: absolute; inset: 0; z-index: 1;
+  background:
+    linear-gradient(to bottom, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0) 45%),
+    linear-gradient(to top,    rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 40%);
+}
+.scenario-card-overlay { position: absolute; top: 0; left: 0; right: 0; padding: 22px 22px 0; z-index: 2; }
+.scenario-label { font-size: 11px; font-weight: 700; color: rgba(0,0,0,0.45); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
+.scenario-title { font-size: 20px; font-weight: 900; color: #1a1a1a; line-height: 1.2; letter-spacing: -0.3px; }
+.scenario-subtitle { font-size: 13px; color: #555; font-weight: 500; margin-top: 5px; }
+.scenario-card-cta { position: absolute; bottom: 0; left: 0; right: 0; padding: 0 22px 20px; z-index: 2; display: flex; align-items: center; gap: 10px; }
+.scenario-trigger-text { font-size: 13px; color: #1a1a1a; font-weight: 600; line-height: 1.3; flex: 1; }
+.scenario-arrow-btn { width: 32px; height: 32px; flex-shrink: 0; background: #e3000b; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background 0.15s ease, transform 0.25s ease; }
+.scenario-card.open .scenario-arrow-btn { background: #c20009; transform: rotate(90deg); }
+.scenario-example { display: none; background: #fff; padding: 20px 22px 22px; border-top: 1px solid #ebebeb; }
+.scenario-card.open .scenario-example { display: block; }
+.scenario-example-row { display: flex; justify-content: space-between; align-items: baseline; padding: 9px 0; border-bottom: 1px solid #ebebeb; font-size: 13px; color: #555; }
+.scenario-example-row span:last-child { font-weight: 600; color: #1a1a1a; }
+.scenario-example-total { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0 0; font-size: 15px; font-weight: 900; color: #1a1a1a; border-top: 2px solid #1a1a1a; margin-top: 2px; }
+.scenario-example-note { font-size: 12px; color: #999; line-height: 1.5; margin-top: 12px; }
+
+/* ── RELATED ── */
+.related-section { padding: 48px 32px; }
+.related-inner { max-width: 1120px; margin: 0 auto; }
+.related-inner > h2 { font-size: 26px; font-weight: 900; margin-bottom: 24px; color: #1a1a1a; }
+.related-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.related-card { display: block; color: #1a1a1a; text-decoration: none !important; }
+.related-card:hover .related-title { color: #e3000b; }
+.related-img { border-radius: 8px; overflow: hidden; aspect-ratio: 3/2; background: #e0d8d0; margin-bottom: 14px; }
+.related-img img { width: 100%; height: 100%; object-fit: cover; }
+.related-title { font-size: 15px; font-weight: 600; line-height: 1.35; color: #1a1a1a; display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.related-arrow { color: #1a1a1a; flex-shrink: 0; font-size: 14px; margin-top: 1px; }
+
+/* ── VILLKOR ── */
+.villkor-section { padding: 48px 32px; }
+.villkor-inner { max-width: 1120px; margin: 0 auto; }
+.villkor-inner > h2 { font-size: 30px; font-weight: 900; margin-bottom: 24px; color: #1a1a1a; }
+.villkor-card { background: #f9f5f4; border-radius: 16px; padding: 48px 56px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; }
+.villkor-content { display: flex; flex-direction: column; gap: 36px; }
+.villkor-group h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: #1a1a1a; }
+.villkor-group p { font-size: 14px; color: #555; line-height: 1.6; margin-bottom: 10px; }
+.villkor-link { color: #e3000b; font-size: 14px; font-weight: 500; display: block; margin-top: 6px; }
+.villkor-link:hover { text-decoration: underline; }
+.villkor-apple { font-size: 80px; display: flex; align-items: flex-end; padding-bottom: 8px; }
+
+/* ── FOOTER ── */
+.site-footer { background: #3a3a3a; color: #aaa; padding: 56px 32px 24px; }
+.footer-inner { max-width: 1120px; margin: 0 auto; }
+.footer-logo { margin-bottom: 40px; }
+.footer-logo-text { display: flex; align-items: center; gap: 6px; }
+.footer-logo-ica { font-size: 26px; font-weight: 900; font-style: italic; color: #fff; letter-spacing: -0.5px; }
+.footer-logo-banken { font-size: 18px; font-weight: 700; color: #fff; font-style: normal; }
+.footer-nav { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; margin-bottom: 48px; }
+.footer-col h4 { font-size: 12px; font-weight: 700; color: #fff; text-transform: capitalize; margin-bottom: 14px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.footer-col ul li a { font-size: 13px; color: #888; }
+.footer-col ul li a:hover { color: #fff; text-decoration: none; }
+.footer-bottom { border-top: 1px solid #4a4a4a; padding-top: 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.footer-address { font-size: 12px; color: #666; line-height: 1.6; }
+.footer-social { display: flex; gap: 10px; }
+.footer-social a { width: 32px; height: 32px; border: 1px solid #555; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #888; font-size: 13px; }
+.footer-social a:hover { border-color: #888; color: #fff; text-decoration: none; }
+.footer-apps { display: flex; gap: 10px; }
+.app-store-btn { background: #1a1a1a; border: 1px solid #555; border-radius: 7px; padding: 6px 14px; display: flex; align-items: center; gap: 8px; color: #fff; text-decoration: none !important; }
+.app-store-btn:hover { border-color: #888; }
+.app-btn-top { font-size: 9px; color: #aaa; line-height: 1; }
+.app-btn-main { font-size: 13px; font-weight: 600; line-height: 1.2; }
+.footer-links-bar { border-top: 1px solid #4a4a4a; padding-top: 16px; margin-top: 16px; display: flex; gap: 24px; flex-wrap: wrap; font-size: 12px; }
+.footer-links-bar span { color: #555; font-weight: 600; }
+.footer-links-bar a { color: #666; }
+.footer-links-bar a:hover { color: #aaa; text-decoration: none; }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ══ NAVBAR ══════════════════════════════════════════ -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="https://www.icaforsakring.se/" class="nav-logo">
+      <span class="nav-logo-ica">ICA</span><span class="nav-logo-rest">&nbsp;Försäkring</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Försäkringar <span class="nav-chevron">▾</span></a></li>
+      <li><a href="#">Anmäl skada</a></li>
+      <li><a href="#">Tips &amp; råd</a></li>
+      <li><a href="#">Kundservice</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-icon" aria-label="Sök">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <a href="#" class="nav-login">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Logga in
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ BREADCRUMB ════════════════════════════════════════ -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="#">Startsida</a>
+    <span class="sep">›</span>
+    <a href="#">Bilförsäkring</a>
+    <span class="sep">›</span>
+    <span>Vad kostar bilförsäkring?</span>
+  </div>
+</div>
+
+<!-- ══ HERO ══════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>Vad kostar en bilförsäkring?</h1>
+      <p class="hero-ingress">Priset på din bilförsäkring beräknas individuellt och kan skilja sig mycket mellan olika bilar och ägare. Det finns ingen fast prislista - istället vägs faktorer som bilmärke, bilens ålder, var du bor och hur länge du kört ihop till ett pris som speglar just din situation.</p>
+      <div style="margin-top: 24px;">
+        <a href="https://www.icaforsakring.se/bilforsakring/helforsakring/" class="btn-red">
+          Se ditt pris
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_860,q_auto/v1760706462/spegeland-bild.webp"
+           alt="Vad kostar bilförsäkring?"
+           onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<!-- ══ INFO SAND CARD ════════════════════════════════════ -->
+<section class="info-section">
+  <div class="info-card">
+    <div>
+      <h2>Det här räknas in i priset</h2>
+      <p>Försäkringsbolag beräknar priset utifrån hur stor sannolikheten är att en skada sker och hur dyrt det blir att ersätta den. Det gör att samma bilmodell kan kosta olika mycket att försäkra beroende på vem som äger den och var hen bor.</p>
+      <ul class="info-checklist">
+        <li>
+          <span class="ico"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="#1a1a1a" stroke-width="1.5"/><polyline points="6.5,11 9.5,14 15.5,8.5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><strong>Bilens fabrikat, modell och årsmodell</strong><span>En dyrare bil kostar mer att reparera och ersätta. Bilmärke och modell är den enskilt störste prispåverkaren.</span></div>
+        </li>
+        <li>
+          <span class="ico"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="#1a1a1a" stroke-width="1.5"/><polyline points="6.5,11 9.5,14 15.5,8.5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><strong>Din ålder och hur länge du haft körkort</strong><span>Unga och oerfarna förare betalar mer - risken för olycka är statistiskt sett högre i början av körlivet.</span></div>
+        </li>
+        <li>
+          <span class="ico"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="#1a1a1a" stroke-width="1.5"/><polyline points="6.5,11 9.5,14 15.5,8.5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><strong>Var du bor</strong><span>Boendeort påverkar stöldrisken och trafikolycksstatistiken. Storstad kostar generellt mer än glesbygd.</span></div>
+        </li>
+        <li>
+          <span class="ico"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="10" stroke="#1a1a1a" stroke-width="1.5"/><polyline points="6.5,11 9.5,14 15.5,8.5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><strong>Vilken försäkringsnivå och självrisk du väljer</strong><span>Trafik är billigast och täcker det obligatoriska minimum. Halv- och helförsäkring ger bredare skydd och kostar mer. En högre självrisk sänker premien.</span></div>
+        </li>
+      </ul>
+    </div>
+    <div class="info-car">
+      <svg viewBox="0 0 180 130" width="180" height="130" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="60" width="160" height="45" rx="8" fill="#e8e3dc"/>
+        <path d="M45 60 Q55 30 85 28 L120 28 Q148 30 155 60 Z" fill="#f0ede8"/>
+        <path d="M60 58 Q65 38 85 36 L105 36 Q118 38 122 58 Z" fill="#c8dce8" opacity="0.7"/>
+        <circle cx="48" cy="105" r="18" fill="#2a2a2a"/>
+        <circle cx="48" cy="105" r="11" fill="#4a4a4a"/>
+        <circle cx="48" cy="105" r="5" fill="#888"/>
+        <circle cx="132" cy="105" r="18" fill="#2a2a2a"/>
+        <circle cx="132" cy="105" r="11" fill="#4a4a4a"/>
+        <circle cx="132" cy="105" r="5" fill="#888"/>
+        <rect x="12" y="68" width="14" height="8" rx="2" fill="#f5e870" opacity="0.8"/>
+        <rect x="154" y="68" width="14" height="8" rx="2" fill="#e3000b" opacity="0.7"/>
+        <rect x="76" y="78" width="14" height="4" rx="2" fill="#c8c0b8"/>
+        <rect x="110" y="78" width="14" height="4" rx="2" fill="#c8c0b8"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SPLIT: Bilmärke och modell ═══════════════════════ -->
+<section class="split">
+  <div class="split-inner">
+    <div class="split-text">
+      <h2>Bilmärke och modell påverkar mest</h2>
+      <p>Det enskilt viktigaste som styr priset är vilken bil du försäkrar. En dyrare bil kostar mer att reparera - reservdelar är dyrare och arbetet tar längre tid. Märken som BMW, Audi och Mercedes-Benz har generellt högre premie än mer prisvärda alternativ som Skoda, Toyota eller Ford.</p>
+      <p>Elbilar kostar mer att försäkra än bensin- och dieselbilar. Det beror på att batterier och elbilsspecifika komponenter är dyra att ersätta. Hybridbilar hamnar däremellan. Skillnaden är störst i halv- och helförsäkring där maskinskada och vagnskada ingår.</p>
+      <p>Bilens årsmodell spelar också roll. Maskinskadeskyddet - som täcker oförutsedda motorfel - gäller bara för bilar som är maximalt 8 år gamla och har körts under 12 000 mil.</p>
+    </div>
+    <div class="split-photo">
+      <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_860,q_auto/v1760706462/spegeland-bild.webp"
+           alt="Bilmärke och modell påverkar priset på bilförsäkring"
+           onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<!-- ══ ACCORDION: Fler faktorer ════════════════════════ -->
+<section class="accordion-section">
+  <div class="accordion-inner">
+    <h2>Fler faktorer som påverkar ditt pris</h2>
+    <p>Utöver bilmärket vägs ett antal personliga och geografiska faktorer in när priset räknas ut.</p>
+
+    <div class="acc-group-header">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      Om dig som ägare
+    </div>
+    <div class="accordion-list">
+      <details class="acc-item">
+        <summary>Din ålder och körerfarenhet <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body"><p>Hur länge du har haft körkort är en av de starkaste enskilda prisfaktorerna. En ung förare som nyss tagit körkort betalar mer än en 45-åring med 25 år bakom ratten. Det speglar statistiken: oerfarna förare är inblandade i fler olyckor och orsakar i snitt dyrare skador.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary>Var du bor - stad eller glesbygd <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body"><p>Boendeort räknas in eftersom stöldrisken och antalet trafikolyckor varierar kraftigt mellan stad och landsbygd. I storstadsregioner är bilstölder vanligare och trafiktätheten hög, vilket höjer premien. I glest befolkade delar av Sverige är premien generellt lägre.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary>Hur långt du kör per år <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body"><p>Årskörsträcka är en direkt prisfaktor. Den som kör 3 000 mil per år har statistiskt sett fler tillfällen att råka ut för en olycka eller skada än den som kör 500 mil. Kör du lite kan du alltså räkna med ett lägre pris.</p></div>
+      </details>
+    </div>
+
+    <div class="acc-group-header" style="margin-top:24px;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      Om bilen och hur du förvarar den
+    </div>
+    <div class="accordion-list">
+      <details class="acc-item">
+        <summary>Garage eller parkering på gatan <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body"><p>En bil som förvaras i ett låst garage löper lägre risk att bli stulen eller utsättas för skadegörelse. Förvaringsplats kan därför påverka priset - framför allt i storstäder där stöldrisken är som störst. Det är viktigt att ange rätt förvaringsplats för att få ett korrekt pris och rätt ersättning om en skada inträffar.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary>Bilens ålder <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body"><p>En yngre bil är generellt dyrare att ersätta men kan ha lägre risk för maskinskada. En äldre bil med slitage kan kosta mer att reparera. Maskinskadeskyddet gäller dessutom bara för bilar som är maximalt 8 år gamla och har körts under 12 000 mil - vilket direkt påverkar vad du kan förvänta dig av försäkringen.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary>Bensin, diesel, hybrid eller elbil <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body"><p>Drivmedel påverkar premiepriset. Elbilar är dyrast att försäkra - batterier och komponenter är dyra att ersätta och reparationskostnaderna är höga. Bensin- och dieselbilar är billigast. Hybridbilar landar däremellan. Skillnaden är störst i helförsäkringen där vagnskada och maskinskada ingår.</p></div>
+      </details>
+    </div>
+
+    <div class="acc-group-header" style="margin-top:24px;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Om försäkringen
+    </div>
+    <div class="accordion-list">
+      <details class="acc-item">
+        <summary>Vilken nivå du väljer - trafik, halv eller hel <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body"><p>Trafikförsäkring är obligatorisk och den lägsta nivån. Den täcker personskador och andras egendom men inte din egen bil. Halvförsäkring lägger till stöld, brand, glas, maskinskada och allrisk. Helförsäkring täcker dessutom vagnskada - plåt- och lackskador - även om du orsakat olyckan själv. Ju bredare skydd, desto högre premie.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary>Vald självrisk <div class="acc-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="acc-body"><p>Självrisken är den del du betalar själv när en skada inträffar. Du väljer vagnskadans självrisk fritt vid köp - en högre självrisk ger lägre månadspremie, men du betalar mer ur fickan om skadan väl uppstår. Trafikförsäkring, trafikolycksfall och krishjälp har alltid 0 kr i självrisk.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ══ SPLIT: Sänk din premie ═══════════════════════════ -->
+<section class="split">
+  <div class="split-inner" style="direction:rtl;">
+    <div class="split-photo" style="direction:ltr;">
+      <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_860,q_auto/v1732108401/f9576742.webp"
+           alt="Sänk priset på bilförsäkringen"
+           onerror="this.style.display='none'">
+    </div>
+    <div class="split-text" style="direction:ltr;">
+      <h2>Så kan du påverka vad du betalar</h2>
+      <p>Det finns saker du faktiskt kan göra för att hålla nere premien. Det enklaste är att välja rätt försäkringsnivå för din bil. En ny bil med gällande vagnskadegaranti behöver sällan helförsäkring - halvförsäkring ger i de fallen ett likvärdigt skydd till ett lägre pris.</p>
+      <p>Du kan också välja en högre självrisk för vagnskadan. Det sänker din månadskostnad, men tänk på att du behöver kunna betala självrisken ur fickan om något händer.</p>
+      <p>Om du samlar flera försäkringar hos ICA Försäkring kan du dessutom som stammis få bonus på försäkringskostnaden.</p>
+      <a href="https://www.icaforsakring.se/bilforsakring/helforsakring/" class="btn-red">
+        Se ditt pris
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PREMIEEXEMPEL ══════════════════════════════════════ -->
+<section class="scenario-section">
+  <div class="scenario-inner">
+    <h2>Premieexempel för olika bilar och situationer</h2>
+    <p>Priset sätts individuellt - här är tre exempel på vad premien kan bli beroende på bil, förare och val av försäkring.</p>
+    <div class="scenario-grid">
+
+      <div class="scenario-card" onclick="this.classList.toggle('open');document.querySelectorAll('.scenario-card').forEach(c=>{if(c!==this)c.classList.remove('open')})">
+        <div class="scenario-card-img">
+          <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1757677813/bilforsakring-bakgrund-3x2.webp"
+               alt="Toyota Corolla halvförsäkring"
+               onerror="this.parentElement.style.background='#e0d8d0'">
+          <div class="scenario-card-overlay">
+            <div class="scenario-label">Exempel 1</div>
+            <div class="scenario-title">Toyota Corolla, 2020</div>
+            <div class="scenario-subtitle">Erfaren förare, mellanstor stad</div>
+          </div>
+          <div class="scenario-card-cta">
+            <span class="scenario-trigger-text">Se ungefärligt pris</span>
+            <span class="scenario-arrow-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </div>
+        <div class="scenario-example">
+          <div class="scenario-example-row"><span>Ägare</span><span>42 år, 20 års körkort</span></div>
+          <div class="scenario-example-row"><span>Boendeort</span><span>Jönköping</span></div>
+          <div class="scenario-example-row"><span>Körsträcka</span><span>1 200 mil/år</span></div>
+          <div class="scenario-example-row"><span>Nivå</span><span>Halvförsäkring</span></div>
+          <div class="scenario-example-row"><span>Drivmedel</span><span>Bensin</span></div>
+          <div class="scenario-example-total"><span>Ungefärlig premie</span><span>ca 280-360 kr/mån</span></div>
+          <p class="scenario-example-note">Erfaren förare med familjebil i mellanstor stad. Vagnskadegarantin gäller fortfarande - halvförsäkring är rätt nivå. Beräkna ditt exakta pris via priskalkylatorn.</p>
+        </div>
+      </div>
+
+      <div class="scenario-card" onclick="this.classList.toggle('open');document.querySelectorAll('.scenario-card').forEach(c=>{if(c!==this)c.classList.remove('open')})">
+        <div class="scenario-card-img">
+          <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1760706462/spegeland-bild.webp"
+               alt="Volvo XC60 helförsäkring"
+               onerror="this.parentElement.style.background='#e0d8d0'">
+          <div class="scenario-card-overlay">
+            <div class="scenario-label">Exempel 2</div>
+            <div class="scenario-title">Volvo XC60, 2018</div>
+            <div class="scenario-subtitle">Medelålders förare, Göteborg</div>
+          </div>
+          <div class="scenario-card-cta">
+            <span class="scenario-trigger-text">Se ungefärligt pris</span>
+            <span class="scenario-arrow-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </div>
+        <div class="scenario-example">
+          <div class="scenario-example-row"><span>Ägare</span><span>48 år, 28 års körkort</span></div>
+          <div class="scenario-example-row"><span>Boendeort</span><span>Göteborg</span></div>
+          <div class="scenario-example-row"><span>Körsträcka</span><span>1 500 mil/år</span></div>
+          <div class="scenario-example-row"><span>Nivå</span><span>Helförsäkring</span></div>
+          <div class="scenario-example-row"><span>Drivmedel</span><span>Diesel</span></div>
+          <div class="scenario-example-total"><span>Ungefärlig premie</span><span>ca 500-620 kr/mån</span></div>
+          <p class="scenario-example-note">Vagnskadegarantin har löpt ut - helförsäkring är motiverat. Erfaren förare drar ner premien trots storstad. Beräkna ditt exakta pris via priskalkylatorn.</p>
+        </div>
+      </div>
+
+      <div class="scenario-card" onclick="this.classList.toggle('open');document.querySelectorAll('.scenario-card').forEach(c=>{if(c!==this)c.classList.remove('open')})">
+        <div class="scenario-card-img">
+          <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1732108401/f9576742.webp"
+               alt="BMW 320d ung förare Stockholm"
+               onerror="this.parentElement.style.background='#e0d8d0'">
+          <div class="scenario-card-overlay">
+            <div class="scenario-label">Exempel 3</div>
+            <div class="scenario-title">BMW 320d, 2017</div>
+            <div class="scenario-subtitle">Ung förare, Stockholm</div>
+          </div>
+          <div class="scenario-card-cta">
+            <span class="scenario-trigger-text">Se ungefärligt pris</span>
+            <span class="scenario-arrow-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </div>
+        <div class="scenario-example">
+          <div class="scenario-example-row"><span>Ägare</span><span>26 år, 6 års körkort</span></div>
+          <div class="scenario-example-row"><span>Boendeort</span><span>Stockholm</span></div>
+          <div class="scenario-example-row"><span>Körsträcka</span><span>1 800 mil/år</span></div>
+          <div class="scenario-example-row"><span>Nivå</span><span>Helförsäkring</span></div>
+          <div class="scenario-example-row"><span>Drivmedel</span><span>Diesel</span></div>
+          <div class="scenario-example-total"><span>Ungefärlig premie</span><span>ca 780-980 kr/mån</span></div>
+          <p class="scenario-example-note">Tre faktorer drar upp priset: exklusivt märke, ung och oerfaren förare, Stockholm med hög stöldrisk. Beräkna ditt exakta pris via priskalkylatorn.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ════════════════════════════════════════════════ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <h2>Vanliga frågor om priset på bilförsäkring</h2>
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>Varför kostar bilförsäkring olika för olika bilar? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Priset speglar risken att en skada sker och hur dyr den blir att ersätta. En lyxbil med dyra reservdelar kostar mer att reparera än en budgetbil. Stöldrisken skiljer sig också mellan märken och modeller. Det gör att priset varierar kraftigt beroende på exakt vilken bil du försäkrar.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Kostar det mer att försäkra en elbil? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Ja, generellt kostar det mer att försäkra en elbil. Det beror framför allt på att batterier och elbilsspecifika komponenter är dyra att ersätta och att reparationskostnaderna är höga. Skillnaden är tydligast i halv- och helförsäkring där maskinskada och vagnskada ingår.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Påverkar det om bilen står i garage? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Ja, förvaringsplatsen kan påverka priset, framför allt i storstäder med högre stöldrisk. En bil i ett låst garage löper lägre risk att bli stulen eller skadad. Det är viktigt att ange rätt förvaringsplats - annars kan det påverka din rätt till ersättning vid en skada.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Kan jag sänka premien med en högre självrisk? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Ja. Vagnskadans självrisk väljer du fritt - en högre självrisk ger lägre månadspremie. Välj en selvrisknivå du faktiskt klarar av att betala om skadan inträffar. Trafikförsäkring, trafikolycksfall och krishjälp har alltid 0 kr i självrisk oavsett vilket val du gör.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Hur länge bör man ha helförsäkring? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Helförsäkring passar bäst för bilar vars vagnskadegaranti inte längre gäller - vanligtvis bilar äldre än tre år. Eftersom bilen minskar i värde lönar det sig oftast inte att ha helförsäkring på en bil äldre än tio år. Det beror dock helt på bilens marknadsvärde jämfört med premien.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Behövs helförsäkring på en ny bil? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Har du en fabriksny bil med gällande vagnskadegaranti täcker den i princip samma saker som vagnskadeskyddet i helförsäkringen. ICA Försäkring rekommenderar då halvförsäkring, som ger ett likvärdigt skydd till lägre pris. Är du osäker - kontakta oss för rådgivning om just din bil.</p></div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Täcker försäkringen motorhaveri? <div class="faq-chevron"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg></div></summary>
+        <div class="faq-answer"><p>Maskinskadeskyddet, som ingår i halvförsäkring och helförsäkring, kan täcka oförutsedda skador på motor om bilen är maximalt 8 år gammal och har körts under 12 000 mil. När någon av dessa gränser nås slutar maskinskadeskyddet att gälla automatiskt.</p></div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ════════════════════════════════════════════════ -->
+<section style="padding: 48px 32px;">
+  <div style="max-width: 1120px; margin: 0 auto; border-top: 1px solid #e8e8e8; padding-top: 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
+    <div>
+      <h2 style="font-size: 26px; font-weight: 900; color: #1a1a1a; margin-bottom: 8px;">Redo att beräkna ditt pris?</h2>
+      <p style="font-size: 15px; color: #555; line-height: 1.6;">Det tar under en minut att få ett exakt pris för just din bil.</p>
+    </div>
+    <a href="https://www.icaforsakring.se/bilforsakring/helforsakring/" class="btn-red" style="flex-shrink: 0;">
+      Se ditt pris
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+  <div style="max-width: 1120px; margin: 32px auto 0; display: grid; grid-template-columns: repeat(3,1fr); gap: 20px;">
+    <a href="https://www.icaforsakring.se/bilforsakring/trafikforsakring/" class="related-card">
+      <div class="related-img">
+        <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1757677813/bilforsakring-bakgrund-3x2.webp"
+             alt="Trafikförsäkring bil"
+             onerror="this.parentElement.style.background='#d8d0c8'">
+      </div>
+      <div class="related-title">Trafikförsäkring <span class="related-arrow">→</span></div>
+    </a>
+    <a href="https://www.icaforsakring.se/bilforsakring/halvforsakring/" class="related-card">
+      <div class="related-img">
+        <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1732108401/f9576742.webp"
+             alt="Halvförsäkring bil"
+             onerror="this.parentElement.style.background='#d8d0c8'">
+      </div>
+      <div class="related-title">Halvförsäkring <span class="related-arrow">→</span></div>
+    </a>
+    <a href="https://www.icaforsakring.se/bilforsakring/helforsakring/" class="related-card">
+      <div class="related-img">
+        <img src="https://assets.icanet.se/image/upload/f_auto,c_limit,w_700,q_auto/v1760706462/spegeland-bild.webp"
+             alt="Helförsäkring bil"
+             onerror="this.parentElement.style.background='#d8d0c8'">
+      </div>
+      <div class="related-title">Helförsäkring <span class="related-arrow">→</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <div class="footer-logo-text">
+        <span class="footer-logo-ica">ICA</span>
+        <span class="footer-logo-banken">&nbsp;Banken</span>
+      </div>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-col">
+        <h4>Våra tjänster</h4>
+        <ul><li><a href="#">Låna pengar</a></li><li><a href="#">Kort &amp; betala</a></li><li><a href="#">Spara pengar</a></li><li><a href="#">Försäkringar</a></li><li><a href="#">Erbjudanden</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kundservice</h4>
+        <ul><li><a href="#">Frågor och svar</a></li><li><a href="#">Kontakta oss</a></li><li><a href="#">Tyck till om oss</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Om ICA Banken</h4>
+        <ul><li><a href="#">Fakta om oss</a></li><li><a href="#">Presskontakt</a></li><li><a href="#">Hållbarhetsarbete</a></li><li><a href="#">Jobba hos oss</a></li><li><a href="#">Digital tillgänglighet</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Juridik och säkerhet</h4>
+        <ul><li><a href="#">Personuppgifter</a></li><li><a href="#">Cookies</a></li><li><a href="#">Villkor</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul><li><a href="#">Terms</a></li><li><a href="#">Privacy</a></li><li><a href="#">Cookies</a></li><li><a href="#">Licenses</a></li><li><a href="#">Contact</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-address">ICA Banken AB, Box 4075, 169 04 Solna<br>Org: 516401-0190</div>
+      <div class="footer-social">
+        <a href="#" aria-label="YouTube"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23 7s-.3-1.9-1.1-2.7c-1.1-1.1-2.3-1.1-2.8-1.2C16.2 3 12 3 12 3s-4.2 0-7.1.1c-.6.1-1.8.1-2.8 1.2C1.3 5.1 1 7 1 7S.7 9.1.7 11.2v2c0 2 .3 4.1.3 4.1s.3 1.9 1.1 2.7c1.1 1.1 2.5 1.1 3.1 1.2C7.2 21.3 12 21.3 12 21.3s4.2 0 7.1-.2c.6-.1 1.7-.2 2.8-1.2.8-.8 1.1-2.7 1.1-2.7s.3-2.1.3-4.1v-2C23.3 9.1 23 7 23 7zM9.7 15.5V8.4l7.6 3.6-7.6 3.5z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      </div>
+      <div class="footer-apps">
+        <a href="#" class="app-store-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83"/></svg><div><div class="app-btn-top">Hämta i</div><div class="app-btn-main">App Store</div></div></a>
+        <a href="#" class="app-store-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m3 3 8.5 8.5L3 20h2l7-7 7 7h2L13 11.5 21 3h-2l-6 6-6-6z"/></svg><div><div class="app-btn-top">LADDA NED PÅ</div><div class="app-btn-main">Google Play</div></div></a>
+      </div>
+    </div>
+    <div class="footer-links-bar">
+      <span>Länkar</span>
+      <a href="#">Penningtvätt</a>
+      <a href="#">Insättningsgaranti</a>
+      <a href="#">Behandling av personuppgifter</a>
+      <a href="#">Cookies</a>
+      <a href="#">Tillgänglighetsredogörelse</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
